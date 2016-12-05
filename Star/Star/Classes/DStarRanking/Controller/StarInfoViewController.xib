@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarInfoViewController">
+            <connections>
+                <outlet property="headerView" destination="HY8-Zn-IOQ" id="zJR-N3-j5x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="kkI-bo-hf5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <view key="tableHeaderView" contentMode="scaleToFill" restorationIdentifier="starInfoHeaderView" id="HY8-Zn-IOQ" userLabel="头部" customClass="StarInfoHeaderView">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarSelf.png" translatesAutoresizingMaskIntoConstraints="NO" id="5zO-wq-AMr">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="102" id="AbP-6y-wKr"/>
+                            <constraint firstAttribute="width" constant="169" id="cMk-kz-31u"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-Xp-otz" userLabel="出生">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="YnL-Kc-WUd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVG-30-J4a" userLabel="介绍">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="WIM-Xp-otz" firstAttribute="leading" secondItem="5zO-wq-AMr" secondAttribute="trailing" constant="10" id="2Ob-RN-x2e"/>
+                    <constraint firstAttribute="trailing" secondItem="WIM-Xp-otz" secondAttribute="trailing" constant="10" id="2li-rc-NLt"/>
+                    <constraint firstAttribute="trailing" secondItem="fVG-30-J4a" secondAttribute="trailing" constant="10" id="31g-qx-etR"/>
+                    <constraint firstItem="fVG-30-J4a" firstAttribute="leading" secondItem="HY8-Zn-IOQ" secondAttribute="leading" constant="10" id="aSc-ry-AFM"/>
+                    <constraint firstItem="5zO-wq-AMr" firstAttribute="top" secondItem="HY8-Zn-IOQ" secondAttribute="top" constant="10" id="jej-wM-3Zg"/>
+                    <constraint firstItem="5zO-wq-AMr" firstAttribute="leading" secondItem="HY8-Zn-IOQ" secondAttribute="leading" constant="10" id="mQs-rB-5EP"/>
+                    <constraint firstAttribute="bottom" secondItem="fVG-30-J4a" secondAttribute="bottom" constant="5" id="qGe-wd-foM"/>
+                    <constraint firstItem="WIM-Xp-otz" firstAttribute="top" secondItem="HY8-Zn-IOQ" secondAttribute="top" constant="15" id="sBu-a7-ohN"/>
+                    <constraint firstItem="fVG-30-J4a" firstAttribute="top" secondItem="5zO-wq-AMr" secondAttribute="bottom" constant="5" id="voB-nj-Mpo"/>
+                </constraints>
+                <connections>
+                    <outlet property="birthAddressLabel" destination="WIM-Xp-otz" id="wsz-YZ-phz"/>
+                    <outlet property="detailInfoLabel" destination="fVG-30-J4a" id="9QJ-75-JlD"/>
+                    <outlet property="imgView" destination="5zO-wq-AMr" id="7fH-nF-F71"/>
+                </connections>
+            </view>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+            </connections>
+            <point key="canvasLocation" x="556.5" y="332.5"/>
+        </tableView>
+    </objects>
+    <resources>
+        <image name="StarSelf.png" width="169" height="102"/>
+    </resources>
+</document>

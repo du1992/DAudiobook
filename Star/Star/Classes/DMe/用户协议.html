@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    
+    <head>
+        <title>用户协议</title>
+        <meta charset="UTF-8">
+            <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+                <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+                    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                        <script>
+                            (function (window, undefined) {
+                             var resizeTimeout = 0,
+                             
+                             // html元素
+                             html = window.document.documentElement,
+                             
+                             // 设计图尺寸大小
+                             designWidth = 750,
+                             
+                             // 最大允许的窗体大小
+                             maxWidth = 750;
+                             function setBaseFontSize() {
+                             // 获取当前窗体宽度
+                             var windowWidth = html.getBoundingClientRect().width;
+                             // 当窗体大小大于最大允许的窗体大小时，限制大小
+                             if (windowWidth > maxWidth) {
+                             windowWidth = maxWidth;
+                             }
+                             // 计算当前窗体宽度相对于设计图的倍率
+                             var ratio = windowWidth / designWidth;
+                             // 计算当前的基础字体大小
+                             var baseFontSize = ratio * 100;
+                             // 将基础字体大小赋值给html元素
+                             html.style.fontSize = baseFontSize + 'px';
+                             html.ratio = ratio;
+                             html.bfs = baseFontSize;
+                             }
+                             // 窗口大小改变时重新计算基础字体大小
+                             window.addEventListener('resize', function () {
+                                                     // 为了避免频繁计算，通过timeout进行节流
+                                                     if (resizeTimeout) {
+                                                     clearTimeout(resizeTimeout);
+                                                     }
+                                                     resizeTimeout = setTimeout(setBaseFontSize, 300);
+                                                     }, false);
+                             
+                             setBaseFontSize();
+                             })(window);
+                            </script>
+                        <style>
+                            *{
+                                margin:0;padding:0;
+                            }
+                        body{
+                            font-size:.24rem;
+                        }
+                        header{
+                            padding: 0.2rem 0;
+                            border-bottom: 1px solid #E2E2E2;
+                            margin: 0 -0.3rem;
+                        }
+                        .left{
+                            width: 0.45rem;
+                            height: 0.38rem;
+                            margin-left: 0.3rem;
+                            background-size:0.45rem 0.38rem;
+                        }
+                        #title{
+                            font-size: 0.38rem;
+                            text-align: center;
+                            color: #4E2717;
+                            
+                            margin-left: 0.5rem;
+                        }
+                        .wrapper{
+                            width: 6.9rem;
+                            padding: 0 0.3rem;
+                            background-color: #FFFFFF;
+                        }
+                        .small-title{
+                            display: block;
+                            font-size: 0.32rem;
+                            padding-top: 0.3rem;
+                            text-align: justify;
+                            /*font-family: PingFangCS-Regular;*/
+                        }
+                        #content p{
+                            color: #5B5B5B;
+                            font-size: 0.28rem;
+                            margin-top: 0.2rem;
+                            text-align: justify;
+                        }
+                        .no-pading{
+                            padding-top: 0;
+                        }
+                        </style>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div id="content">
+                <div>
+                    <span class="small-title">尊敬的用户，请您仔细阅读以下条款</span>
+                    
+                    <h2><p>遵守法律及法律效力</p></h2>
+                    <p>会员同意遵守《中华人民共和国保密法》、《计算机信息系统国际联网保密管理规定》、《中华人民共和国计算机信息系统安全保护条例》、《计算机信息网络国际联网安全保护管理办法》、《中华人民共和国计算机信息网络国际联网管理暂行规定》及其实施办法等相关法律法规的任何及所有的规定，并对会员以任何方式使用服务的任何行为及其结果承担全部责任。</p>
+                    <h2><p>用户说明</p></h2>
+                    <p>用户不得利用本服务制作、上载、复制、发布、传播如下法律、法规和政策禁止的内容：</p>
+                    <p>1. 反对宪法所确定的基本原则的；</p>
+                    <p>2. 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+                    <p>3. 损害国家荣誉和利益的；</p>
+                    <p> 4. 煽动民族仇恨、民族歧视，破坏民族团结的；</p>
+                    <p>5. 破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+                    <p>6. 散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+                    <p>7. 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
+                    <p>8. 侮辱或者诽谤他人，侵害他人合法权益的；</p>
+                    <p>9.不遵守法律法规底线、社会主义制度底线、国家利益底线、公民合法权益底线、社会公共秩序底线、道德风尚底线和信息真实性底线的“七条底线”要求的；</p>
+                    <p>10.含有法律、行政法规禁止的其他内容的信息。
+                    </p>
+                    <p>如果用户出现以上情况一种几种，将自己承担其使用的后果，与本应用无关</p>
+                    <p>本应用数据收集来自互联网，如有违反的内容请联系作者。</p>
+                </div>
+                
+                
+                
+</html>
