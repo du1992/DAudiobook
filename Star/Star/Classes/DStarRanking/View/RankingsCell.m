@@ -21,7 +21,7 @@
         _ranking=ranking;
         self.nameLabel.text=_ranking.name;
         NSURL *imgUrl=[NSURL URLWithString:_ranking.imgUrl];
-#warning 占位图片没有设置
+
         [self.imgView sd_setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"starRanking"]];
         self.heatLabel.text=ranking.heat;
         self.chartLabel.text=ranking.chart;
@@ -31,6 +31,10 @@
         self.imgView.clipsToBounds = YES;
         self.imgView.layer.cornerRadius = 33;
         self.imgView.layer.borderWidth = 3;
+        
+        self.clipsToBounds = YES;
+        self.layer.cornerRadius = 33;
+        self.layer.borderWidth = 3;
         
         
     }

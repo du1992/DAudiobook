@@ -66,9 +66,15 @@
         _scrollView=[[UIScrollView alloc]initWithFrame:frame];
         //活动有翻页效果
         _scrollView.pagingEnabled=YES;
-        
-        //
+     
         _scrollView.directionalLockEnabled = YES;
+        
+        
+        _scrollView.minimumZoomScale = 1.0;   //最小倍数
+        _scrollView.maximumZoomScale = 2.0;  //最大倍数
+//        _scrollView.contentSize = CGSizeMake(image.size.width,image.size.height); //两倍大小图片
+        _scrollView.decelerationRate = 1.0f; //减速速率
+        
         
         
         //设置代理
@@ -193,22 +199,25 @@
 #pragma mark--与缩放相关
 -(void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
 {//即将缩放
-    //    NSLog(@"%s",__FUNCTION__);
+        NSLog(@"%s",__FUNCTION__);
     
 }
 -(void)scrollViewDidZoom:(UIScrollView *)scrollView
 {//正在缩放
-    //    NSLog(@"%s",__FUNCTION__);
+        NSLog(@"%s",__FUNCTION__);
+    
 }
 -(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
 {//缩放结束
     //    NSLog(@"%s",__FUNCTION__);
-    //    UIImageView *imageView=(UIImageView *)[self.view viewWithTag:101];
-    //    if (scrollView.zoomScale<1.0) {//如果缩放
-    //        imageView.center=CGPointMake(scrollView.bounds.size.width/2, scrollView.bounds.size.height/2);    }
+        UIImageView *imageView=(UIImageView *)[self.view viewWithTag:101];
+        if (scrollView.zoomScale<1.0) {//如果缩放
+            imageView.center=CGPointMake(scrollView.bounds.size.width/2, scrollView.bounds.size.height/2);    }
     
     
     
 }
+
+
 
 @end

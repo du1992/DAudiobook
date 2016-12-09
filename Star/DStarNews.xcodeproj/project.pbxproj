@@ -68,7 +68,7 @@
 		3C9EFF561DF5624B000802E1 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF551DF5624B000802E1 /* AddressBookUI.framework */; };
 		3C9EFF581DF56264000802E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF571DF56264000802E1 /* AudioToolbox.framework */; };
 		3C9EFF5A1DF5626B000802E1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF591DF5626B000802E1 /* AddressBook.framework */; };
-		3C9EFF5C1DF5627D000802E1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF5B1DF5627D000802E1 /* UserNotifications.framework */; };
+		3C9EFF5C1DF5627D000802E1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF5B1DF5627D000802E1 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3C9EFF5E1DF5628F000802E1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF5D1DF5628F000802E1 /* CoreFoundation.framework */; };
 		3C9EFF601DF562A5000802E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF5F1DF562A5000802E1 /* SystemConfiguration.framework */; };
 		3C9EFF621DF562AF000802E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9EFF611DF562AF000802E1 /* Security.framework */; };

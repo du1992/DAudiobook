@@ -61,7 +61,7 @@
     [self   loadMoreData];
     //设置颜色
     self.view.backgroundColor=[UIColor whiteColor];
-    
+    [self.view showLoadingMeg:kNetWorkLoadingMessage];
     
 }
 
@@ -93,12 +93,13 @@
 {
     if ([refreshView isKindOfClass:[MJRefreshFooterView class]]) { // 上拉刷新
         [self loadMoreData];
+        //结束刷新
+        [self.footer endRefreshing];
     } else {
         // 下拉刷新
         self.number=2;
         [self loadMoreData];
-        //结束刷新
-        [self.footer endRefreshing];
+        [self.header endRefreshing];
     }
 }
 
@@ -132,9 +133,11 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [selfVC.customTableView reloadData];
                 [selfVC.footer endRefreshing];
+                 [self.view hideLoading];
             });
         }else{
            [selfVC.footer endRefreshing];
+            [self.view showLoadingMeg:kNetWorkError time:kDefaultShowTime];
         }
     });
     

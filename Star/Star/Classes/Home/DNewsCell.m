@@ -50,7 +50,7 @@
         _imgView.clipsToBounds = YES;
         _imgView.layer.borderWidth =0.1;
         _imgView.layer.borderColor = RGB(81, 41, 23).CGColor;
-        _imgView.contentMode = UIViewContentModeScaleToFill;
+        _imgView.contentMode = UIViewContentModeCenter;
         
         self.titleLabel.text=_news.title;
         self.datelabel.text=_news.date;

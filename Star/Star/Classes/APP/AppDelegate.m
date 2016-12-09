@@ -52,6 +52,11 @@
     }
     [AFNetMonitor sharedClient];
     
+    //使用友盟统计
+    [self initYouMeng:launchOptions];
+    //注册极光推送
+    [self JPushSDK:launchOptions];
+    
     
     return YES;
 }

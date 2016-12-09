@@ -40,6 +40,10 @@
     _imgView.layer.borderWidth =0.5;
     _imgView.layer.borderColor = RGB(81, 41, 23).CGColor;
     
+    self.contentView.layer.cornerRadius=8;
+    self.contentView.layer.masksToBounds=YES;
+    self.contentView.clipsToBounds = YES;
+    
     [self.contentView addSubview:_label];
     
 }

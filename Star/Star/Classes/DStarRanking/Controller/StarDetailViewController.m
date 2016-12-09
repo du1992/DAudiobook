@@ -24,7 +24,7 @@
     [self.view addSubview: webView];
     
     __block NSString *htmlStr=nil;
-//    [GMDCircleLoader setOnView:self.view withTitle:@"正在加载" animated:YES];
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         htmlStr=[StarDetailTool starDetail:self.linkUrl];
         if(htmlStr !=nil){
