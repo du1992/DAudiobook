@@ -13,6 +13,7 @@
 
  此外 另一个小项目也已经上线了 大家有兴趣可以玩一玩
 ------- 
+<img width="150" height="150" src="http://7xpxoc.com1.z0.glb.clouddn.com/%E7%BC%96%E7%A8%8B%E7%AE%A1%E5%AE%B6%E5%9B%BE%E6%A0%87.png"/>
  [![image3]](https://itunes.apple.com/cn/app/bian-cheng-guan-jia/id1179656413?mt=8)  
 [image3]: http://7xpxoc.com1.z0.glb.clouddn.com/%E7%BC%96%E7%A8%8B%E7%AE%A1%E5%AE%B6%E5%9B%BE%E6%A0%87.png "编程管家"  
  [编程管家，已上线，链接](https://itunes.apple.com/cn/app/bian-cheng-guan-jia/id1179656413?mt=8)
