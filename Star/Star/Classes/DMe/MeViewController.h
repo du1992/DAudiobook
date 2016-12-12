@@ -2,7 +2,7 @@
 //  MeViewController.h
 //  weibo
 //
-//  Created by JUNE_EN on 15/5/7.
+//  Created by DUCHENGWEN on 2016/12/3.
 //  Copyright (c) 2015年 beijing. All rights reserved.
 //
 

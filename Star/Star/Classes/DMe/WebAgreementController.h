@@ -1,8 +1,7 @@
 //
 //  WWebAgreement Controller.h
 //  kaoLa
-//
-//  Created by DUCHENGWEN on 2016/10/14.
+////  Created by DUCHENGWEN on 2016/12/3.
 //  Copyright © 2016年 kenneth. All rights reserved.
 //
 
