@@ -28,10 +28,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    self.window.rootViewController=[[DTabBarController alloc] init];
+     self.window.rootViewController=[[DTabBarController alloc] init];
     [self.window makeKeyAndVisible];
     
+    //引导页
+    [self  judgePage];
+    //网络判断
+    [AFNetMonitor sharedClient];
+    //使用友盟统计
+    [self initYouMeng:launchOptions];
+    //注册极光推送
+    [self JPushSDK:launchOptions];
+    
+    
+    return YES;
+}
+-(void)judgePage{
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     BOOL hasin = [defaults boolForKey:@"first"];
     if (!hasin) {
@@ -48,18 +60,10 @@
             weakSelf.introductionView = nil;
             
         };
-
+        
     }
-    [AFNetMonitor sharedClient];
-    
-    //使用友盟统计
-    [self initYouMeng:launchOptions];
-    //注册极光推送
-    [self JPushSDK:launchOptions];
-    
-    
-    return YES;
 }
+
 
 -(void)initYouMeng:(NSDictionary *)launchOptions{
     UMConfigInstance.appKey = UmengAppkey;
