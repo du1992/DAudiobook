@@ -22,6 +22,4 @@
 [![image4]](https://itunes.apple.com/cn/app/bian-cheng-guan-jia/id1179656413?mt=8)  
 [image4]: http://7xpxoc.com1.z0.glb.clouddn.com/%E7%BC%96%E7%A8%8B%E7%AE%A1%E5%AE%B6.gif "编程管家" 
 
-<h2>
-<img src="http://7xpxoc.com1.z0.glb.clouddn.com/%E7%BC%96%E7%A8%8B%E7%AE%A1%E5%AE%B6.gif" width="500"  /></h2>
 🙃
