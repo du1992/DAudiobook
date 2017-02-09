@@ -9,7 +9,9 @@
 #import "MBProgressHUD.h"
 #import "UIView+MBProgressHUD.h"
 #import "JPUSHService.h"
-
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
 
 /*
  ====================================================================================================//尺寸
@@ -92,6 +94,8 @@
 #define RGB16(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define RGBA16(rgbaValue) [UIColor colorWithRed:((float)((rgbaValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbaValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbaValue & 0xFF))/255.0 alpha:((float)((rgbaValue & 0xFF000000) >> 24))/255.0]
 
+#define Padding 13
+#define Placholder [UIImage imageNamed:@"2012"]
 
 /*
  ====================================================================================================//个人资料
@@ -167,8 +171,27 @@
  *  欧美排名
  */
 #define kEuropeAmerUrl @"http://www.mingxing.com/list/oumei/index.html"
+/**
+ *  天气接口
+ */
+#define weatherUrl @"https://free-api.heweather.com/v5/forecast"
+/**
+ *  视频接口
+ */
+#define videoListUrl(Pages)  [NSString stringWithFormat:@"http://c.m.163.com/nc/video/list/V9LG4B3A0/y/%d-10.html",(Pages-1)*10]
+
+/**
+ *  电台
+ */
+#define radioUrl @"http://api2.pianke.me/ting/radio"
+/**
+ *  电台详情
+ */
+#define RadioSecondUrl @"http://api2.pianke.me/ting/radio_detail"
 
 /*
+ 
+ 
  ====================================================================================================//数据
  */
 

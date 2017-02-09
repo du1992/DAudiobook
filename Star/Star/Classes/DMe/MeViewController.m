@@ -13,6 +13,11 @@
 #import "UIView+YSBlock.h"
 #import "WebAgreementController.h"
 #import "AboutOurViewController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIBarButtonItem+Helper.h"
+#import "UIViewController+MMDrawerController.h"
+#import "DWebControllers.h"
+
 #define BUFFERX 0 
 #define BUFFERY 0
 
@@ -41,6 +46,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self  setupNavItem];
+    
     imgarray=[[NSArray alloc]init];
     titearray=[[NSArray alloc]init];
     titearray=[NSMutableArray arrayWithObjects:@"用户协议",@"推荐",@"缓存清理",@"关于",nil];
@@ -109,7 +116,8 @@
         WebAgreementController *webVC = [[WebAgreementController alloc] init];
        [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row==1){
-        [self initAlert:@"编程管家" mesage:@"编程管家适用于想要学习编程和初级开发者的人群。主要功能给大家汇报一下\n1.IT资讯 掌握最新的行业动态\n2.各种编程语言基础教程，通俗易懂。\n3.面试题库，找工作必备(适用于客户端开发，前端开发，服务端开发)\n4.试题练习(吾日三省吾身)" otherA:@"取消" otherB:@"确定"];
+        DWebControllers*webVC = [[DWebControllers alloc] init];
+        [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row==2){
         CGFloat fileSize =  [ self filePath ];
         [self initAlert:@"缓存清理" mesage:[NSString stringWithFormat:@"有%.2fMB缓存，确定清除吗？",fileSize] otherA:@"取消" otherB:@"确定"];
@@ -187,5 +195,25 @@
 
 {
    
+}
+
+#pragma mark - 设置导航栏按钮
+- (void)setupNavItem
+{
+    //设置导航栏唤醒抽屉按钮
+    MMDrawerBarButtonItem *leftItem = [MMDrawerBarButtonItem itemWithNormalIcon:@"menu" highlightedIcon:nil target:self action:@selector(leftDrawerButtonPress:)];
+    [leftItem setTintColor:[UIColor blackColor]];
+    
+    //设置紧挨着左侧按钮的标题按钮
+    MMDrawerBarButtonItem *titleItem = [MMDrawerBarButtonItem itemWithTitle:@"首页" target:nil action:nil];
+    [titleItem setTintColor:[UIColor blackColor]];
+    
+    self.navigationItem.leftBarButtonItems = @[leftItem,titleItem];
+}
+
+
+- (void)leftDrawerButtonPress:(MMDrawerBarButtonItem *)item
+{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 @end

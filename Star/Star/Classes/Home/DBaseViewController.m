@@ -212,6 +212,7 @@ static dispatch_queue_t _queue;
         hotsController.linkUrl=news.linkUrl;
         nav.modalPresentationStyle=UIModalPresentationPopover;
         [self presentViewController:nav animated:YES completion:nil];
+        
         [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
     

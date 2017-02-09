@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DTabBarController.h"
 #import "SDWebImageManager.h"
 #import "DIntroductionViewController.h"
 #import "AFNetMonitor.h"
@@ -19,6 +18,10 @@
 //以下几个库仅作为调试引用引用的
 #import <AdSupport/AdSupport.h>
 #import <CommonCrypto/CommonDigest.h>
+#import "DAllControllersTool.h"
+#import "DHomeViewController.h"
+#import "DNavigationController.h"
+#import "DLaunchingViewController.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) DIntroductionViewController *introductionView;
 @end
@@ -28,11 +31,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-     self.window.rootViewController=[[DTabBarController alloc] init];
+    DLaunchingViewController *launchingVC = [[DLaunchingViewController alloc] init];
+   
+    self.window.rootViewController=launchingVC;
     [self.window makeKeyAndVisible];
     
+     
+    
+    
+    
     //引导页
-    [self  judgePage];
+//    [self  judgePage];
     //网络判断
     [AFNetMonitor sharedClient];
     //使用友盟统计

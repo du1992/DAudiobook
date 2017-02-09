@@ -8,6 +8,7 @@
 
 #import "DNavigationController.h"
 #import "UIBarButtonItem+ZN.h"
+#import "UIBarButtonItem+Helper.h"
 #import "Macro.h"
 @interface DNavigationController ()
 
@@ -15,78 +16,54 @@
 
 @implementation DNavigationController
 
-/**
- *  第一次使用这个类的时候会调用(1个类只会调用1次)
- */
-+ (void)initialize
-{
-    // 1.设置导航栏主题
-    [self setupNavBarTheme];
-    
-    // 2.设置导航栏按钮主题
-    [self setupBarButtonItemTheme];
-}
 
-/**
- *  设置导航栏按钮主题
- */
-+ (void)setupBarButtonItemTheme
-{
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
+    //动态更改导航背景 / 样式
+    //开启编辑
+    UINavigationBar *bar = [UINavigationBar appearance];
+    //设置导航条背景颜色
+    [bar setBarTintColor:RGBA_COLOR(39, 184, 232, 1)];
+    //设置字体颜色
+    [bar setTintColor:[UIColor whiteColor]];
+    //设置样式
+    [bar setTitleTextAttributes:@{
+                                  NSForegroundColorAttributeName : [UIColor whiteColor],
+                                  NSFontAttributeName : [UIFont boldSystemFontOfSize:14]
+                                  }];
+    
+    //设置导航条按钮样式
+    //开启编辑
     UIBarButtonItem *item = [UIBarButtonItem appearance];
-    UITabBar *tabBar=[UITabBar appearance];
-    [tabBar setBarTintColor:RGB(220, 220, 220)];
-    tabBar.tintColor=RGB(52, 152, 219);
-    // 设置文字属性
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
-    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-    [item setTitleTextAttributes:textAttrs forState:UIControlStateHighlighted];
-    
-    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
-    disableTextAttrs[NSForegroundColorAttributeName] =  [UIColor lightGrayColor];
-    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    //设置样式
+    [item setTitleTextAttributes:@{
+                                   NSForegroundColorAttributeName : [UIColor whiteColor],
+                                   NSFontAttributeName : [UIFont boldSystemFontOfSize:14]
+                                   } forState:UIControlStateNormal];
 }
 
 /**
- *  设置导航栏主题
+ *  更改状态栏颜色
  */
-+ (void)setupNavBarTheme
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-//
-    // 取出appearance对象
-    UINavigationBar *navBar = [UINavigationBar appearance];
-    [navBar setBarTintColor:[UIColor colorWithRed:52.0/255 green:152.0/255 blue:219.0/255 alpha:0.5]];
-    navBar.tintColor=[UIColor whiteColor];
-    // 设置标题属性
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    
-    textAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
-    textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:19];
-    [navBar setTitleTextAttributes:textAttrs];
+    return UIStatusBarStyleLightContent;
 }
 
--(void)viewDidLoad{
-    self.view.backgroundColor=[UIColor whiteColor];
-    //    self.edgesForExtendedLayout = UIRectEdgeNone;
-}
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+
+//设置状态栏是否隐藏
+- (BOOL)prefersStatusBarHidden
 {
-    if (self.viewControllers.count > 0) {
-        viewController.hidesBottomBarWhenPushed = YES;
-    }
-    [super pushViewController:viewController animated:animated];
+    return NO;
 }
 
-- (void)more
-{
-    [self popToRootViewControllerAnimated:YES];
-}
 
-- (void)back
-{
-    [self popViewControllerAnimated:YES];
-}
+
+
+
+
 
 @end

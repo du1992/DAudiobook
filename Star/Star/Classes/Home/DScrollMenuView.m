@@ -103,12 +103,12 @@ static const CGFloat kYSLIndicatorHeight = 3;
         self.itemViewArray = [NSArray arrayWithArray:views];
         
         // indicator
-        _indicatorView = [[UIView alloc]init];
-        _indicatorView.frame = CGRectMake(10, _scrollView.frame.size.height - kYSLIndicatorHeight, kYSLScrollMenuViewWidth, kYSLIndicatorHeight);
-        //        _indicatorView.backgroundColor = self.itemIndicatorColor;
-        //下方滚动条的颜色
-        _indicatorView.backgroundColor=[UIColor redColor];
-        [_scrollView addSubview:_indicatorView];
+//        _indicatorView = [[UIView alloc]init];
+//        _indicatorView.frame = CGRectMake(10, _scrollView.frame.size.height - kYSLIndicatorHeight, kYSLScrollMenuViewWidth, kYSLIndicatorHeight);
+//        //        _indicatorView.backgroundColor = self.itemIndicatorColor;
+//        //下方滚动条的颜色
+//        _indicatorView.backgroundColor=[UIColor redColor];
+//        [_scrollView addSubview:_indicatorView];
     }
 }
 
@@ -152,7 +152,7 @@ static const CGFloat kYSLIndicatorHeight = 3;
                              }];
         } else {
             label.textColor = _itemTitleColor;
-            label.font=[UIFont systemFontOfSize:16];
+            label.font=[UIFont systemFontOfSize:15];
         }
     }
 }
@@ -162,10 +162,10 @@ static const CGFloat kYSLIndicatorHeight = 3;
 // menu shadow
 - (void)setShadowView
 {//滚动底部的那一条线
-    UIView *view = [[UIView alloc]init];
-    view.frame = CGRectMake(0, self.frame.size.height - 0.5, CGRectGetWidth(self.frame), 0.5);
-    view.backgroundColor = [UIColor lightGrayColor];
-    [self addSubview:view];
+//    UIView *view = [[UIView alloc]init];
+//    view.frame = CGRectMake(0, self.frame.size.height - 0.5, CGRectGetWidth(self.frame), 0.5);
+//    view.backgroundColor = [UIColor lightGrayColor];
+//    [self addSubview:view];
 }
 
 - (void)layoutSubviews

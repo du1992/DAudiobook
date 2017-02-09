@@ -14,10 +14,11 @@
 #import "UIViewController+ZN.h"
 #import "DNavigationController.h"
 #import "StarInfoViewController.h"
-#import "MJRefresh.h"
 #import "RankingMoreTool.h"
 #import "Macro.h"
-
+#import "MMDrawerBarButtonItem.h"
+#import "UIBarButtonItem+Helper.h"
+#import "UIViewController+MMDrawerController.h"
 
 
 @interface StarRankingViewController ()<UITabBarDelegate,UITableViewDataSource,MJRefreshBaseViewDelegate>
@@ -52,6 +53,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     [self isUrlStrin];
     [self setupTableView];
     [self setupRefreshView];
@@ -62,9 +65,13 @@
     //设置颜色
     self.view.backgroundColor=[UIColor whiteColor];
     [self.view showLoadingMeg:kNetWorkLoadingMessage];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
     
 }
-
+-(void)didClickedBack:(UIBarButtonItem *)item{
+    [self.navigationController popViewControllerAnimated:YES];
+  
+}
 /**
  *  集成刷新控件
  */
@@ -215,4 +222,6 @@
     [self.header free];
     [self.footer free];
 }
+
+
 @end

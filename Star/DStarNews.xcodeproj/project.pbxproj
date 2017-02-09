@@ -13,6 +13,71 @@
 		07B2D4F21B13172400BB2DD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2D4F11B13172400BB2DD3 /* Images.xcassets */; };
 		07B2D4F51B13172400BB2DD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B2D4F31B13172400BB2DD3 /* LaunchScreen.xib */; };
 		07B2D5011B13172400BB2DD3 /* StarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B2D5001B13172400BB2DD3 /* StarTests.m */; };
+		3C2F40BF1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40BE1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.m */; };
+		3C2F40C21E3ED9670054CEB6 /* DLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40C11E3ED9670054CEB6 /* DLeftMenuViewController.m */; };
+		3C2F40C71E3EDFD10054CEB6 /* DHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40C61E3EDFD10054CEB6 /* DHeadView.m */; };
+		3C2F40CA1E3EE02C0054CEB6 /* DPlayMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40C91E3EE02C0054CEB6 /* DPlayMusicView.m */; };
+		3C2F40D11E3EE3EA0054CEB6 /* DSongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40D01E3EE3EA0054CEB6 /* DSongModel.m */; };
+		3C2F40D31E3EE46A0054CEB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2F40D21E3EE46A0054CEB6 /* AVFoundation.framework */; };
+		3C2F40EF1E3EE66A0054CEB6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40D91E3EE66A0054CEB6 /* MASCompositeConstraint.m */; };
+		3C2F40F01E3EE66A0054CEB6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40DC1E3EE66A0054CEB6 /* MASConstraint.m */; };
+		3C2F40F11E3EE66A0054CEB6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40DE1E3EE66A0054CEB6 /* MASConstraintMaker.m */; };
+		3C2F40F21E3EE66A0054CEB6 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40E01E3EE66A0054CEB6 /* MASLayoutConstraint.m */; };
+		3C2F40F31E3EE66A0054CEB6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40E41E3EE66A0054CEB6 /* MASViewAttribute.m */; };
+		3C2F40F41E3EE66A0054CEB6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40E61E3EE66A0054CEB6 /* MASViewConstraint.m */; };
+		3C2F40F51E3EE66A0054CEB6 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40E81E3EE66A0054CEB6 /* NSArray+MASAdditions.m */; };
+		3C2F40F61E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40EB1E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		3C2F40F71E3EE66A0054CEB6 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40ED1E3EE66A0054CEB6 /* View+MASAdditions.m */; };
+		3C2F40FB1E3EEC900054CEB6 /* DSideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40F91E3EEC900054CEB6 /* DSideMenuTableViewCell.m */; };
+		3C2F40FC1E3EEC900054CEB6 /* DSideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F40FA1E3EEC900054CEB6 /* DSideMenuTableViewCell.xib */; };
+		3C2F40FF1E3F14750054CEB6 /* DAllControllersTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F40FE1E3F14750054CEB6 /* DAllControllersTool.m */; };
+		3C2F410A1E3F38830054CEB6 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41021E3F38830054CEB6 /* MMDrawerBarButtonItem.m */; };
+		3C2F410B1E3F38830054CEB6 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41051E3F38830054CEB6 /* MMDrawerController.m */; };
+		3C2F410C1E3F38830054CEB6 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41071E3F38830054CEB6 /* MMDrawerVisualState.m */; };
+		3C2F410D1E3F38830054CEB6 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41091E3F38830054CEB6 /* UIViewController+MMDrawerController.m */; };
+		3C2F41121E4319800054CEB6 /* DVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41111E4319800054CEB6 /* DVideoPlayerViewController.m */; };
+		3C2F41151E431A070054CEB6 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41141E431A070054CEB6 /* VideoDetailViewController.m */; };
+		3C2F41191E431AA60054CEB6 /* DSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41181E431AA60054CEB6 /* DSlider.m */; };
+		3C2F411C1E431ADD0054CEB6 /* DVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F411B1E431ADD0054CEB6 /* DVideoPlayer.m */; };
+		3C2F41201E46A8EA0054CEB6 /* DVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F411E1E46A8EA0054CEB6 /* DVideoCell.m */; };
+		3C2F41211E46A8EA0054CEB6 /* DVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F411F1E46A8EA0054CEB6 /* DVideoCell.xib */; };
+		3C2F41251E46A9360054CEB6 /* DVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41241E46A9360054CEB6 /* DVideoItem.m */; };
+		3C2F41281E46BA160054CEB6 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41271E46BA160054CEB6 /* Business.m */; };
+		3C2F41421E46BE510054CEB6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F412A1E46BE500054CEB6 /* LICENSE */; };
+		3C2F41431E46BE510054CEB6 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F412E1E46BE500054CEB6 /* MJExtensionConst.m */; };
+		3C2F41441E46BE510054CEB6 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41301E46BE510054CEB6 /* MJFoundation.m */; };
+		3C2F41451E46BE510054CEB6 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41321E46BE510054CEB6 /* MJProperty.m */; };
+		3C2F41461E46BE510054CEB6 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41341E46BE510054CEB6 /* MJPropertyKey.m */; };
+		3C2F41471E46BE510054CEB6 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41361E46BE510054CEB6 /* MJPropertyType.m */; };
+		3C2F41481E46BE510054CEB6 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41381E46BE510054CEB6 /* NSObject+MJClass.m */; };
+		3C2F41491E46BE510054CEB6 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F413A1E46BE510054CEB6 /* NSObject+MJCoding.m */; };
+		3C2F414A1E46BE510054CEB6 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F413C1E46BE510054CEB6 /* NSObject+MJKeyValue.m */; };
+		3C2F414B1E46BE510054CEB6 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F413E1E46BE510054CEB6 /* NSObject+MJProperty.m */; };
+		3C2F414C1E46BE510054CEB6 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41401E46BE510054CEB6 /* NSString+MJExtension.m */; };
+		3C2F414D1E46BE510054CEB6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41411E46BE510054CEB6 /* README.md */; };
+		3C2F41501E484B360054CEB6 /* UIImage+LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F414F1E484B360054CEB6 /* UIImage+LevelView.m */; };
+		3C2F41551E4A0DD50054CEB6 /* DRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41541E4A0DD50054CEB6 /* DRadioViewController.m */; };
+		3C2F41581E4A100A0054CEB6 /* DRadioSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41571E4A100A0054CEB6 /* DRadioSecondViewController.m */; };
+		3C2F415C1E4A10720054CEB6 /* DRadioSecondRadioInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F415B1E4A10720054CEB6 /* DRadioSecondRadioInfo.m */; };
+		3C2F415F1E4A10B30054CEB6 /* DRadioSecondListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F415E1E4A10B30054CEB6 /* DRadioSecondListModel.m */; };
+		3C2F41621E4A111C0054CEB6 /* DRadioAllList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41611E4A111C0054CEB6 /* DRadioAllList.m */; };
+		3C2F41661E4A12120054CEB6 /* DRadioUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41651E4A12120054CEB6 /* DRadioUserInfo.m */; };
+		3C2F416A1E4A126A0054CEB6 /* DRadioListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41681E4A126A0054CEB6 /* DRadioListCell.m */; };
+		3C2F416B1E4A126A0054CEB6 /* DRadioListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F41691E4A126A0054CEB6 /* DRadioListCell.xib */; };
+		3C2F416E1E4A17CC0054CEB6 /* RadioCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F416D1E4A17CC0054CEB6 /* RadioCarousel.m */; };
+		3C2F41711E4A95E60054CEB6 /* DRadioSecondHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41701E4A95E60054CEB6 /* DRadioSecondHeaderView.m */; };
+		3C2F41741E4A970C0054CEB6 /* userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41731E4A970C0054CEB6 /* userinfo.m */; };
+		3C2F41771E4A9E3D0054CEB6 /* DRadioThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41761E4A9E3D0054CEB6 /* DRadioThirdViewController.m */; };
+		3C2F417B1E4A9F8C0054CEB6 /* RadioSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41791E4A9F8C0054CEB6 /* RadioSecondCell.m */; };
+		3C2F417C1E4A9F8C0054CEB6 /* RadioSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F417A1E4A9F8C0054CEB6 /* RadioSecondCell.xib */; };
+		3C2F417F1E4ABA880054CEB6 /* RadioMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F417E1E4ABA880054CEB6 /* RadioMusicView.m */; };
+		3C2F41821E4ABAFB0054CEB6 /* MusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41811E4ABAFB0054CEB6 /* MusicManager.m */; };
+		3C2F41851E4ABB6C0054CEB6 /* MusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41841E4ABB6C0054CEB6 /* MusicView.m */; };
+		3C2F41881E4ABBCB0054CEB6 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41871E4ABBCB0054CEB6 /* SongModel.m */; };
+		3C2F418B1E4C038B0054CEB6 /* D0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F418A1E4C038B0054CEB6 /* D0.txt */; };
+		3C2F418E1E4C41BA0054CEB6 /* DLaunchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F418D1E4C41BA0054CEB6 /* DLaunchingViewController.m */; };
+		3C2F41911E4C47EA0054CEB6 /* DAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41901E4C47EA0054CEB6 /* DAppStore.m */; };
+		3C2F41941E4C4EA40054CEB6 /* DWebControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F41931E4C4EA40054CEB6 /* DWebControllers.m */; };
 		3C9EFEA81DF3AD4A000802E1 /* DBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9EFEA71DF3AD4A000802E1 /* DBaseCollectionViewController.m */; };
 		3C9EFEAB1DF3B275000802E1 /* DStarPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9EFEAA1DF3B275000802E1 /* DStarPhotosViewController.m */; };
 		3C9EFEB11DF3B898000802E1 /* DPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9EFEB01DF3B898000802E1 /* DPictureViewController.m */; };
@@ -139,7 +204,6 @@
 		3CB599961DF2E7FC007F9EBE /* UIViewController+ZN.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB599901DF2E7FC007F9EBE /* UIViewController+ZN.m */; };
 		3CB5999B1DF2FBB7007F9EBE /* DOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5999A1DF2FBB7007F9EBE /* DOtherViewController.m */; };
 		3CB5999F1DF3018D007F9EBE /* DNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5999E1DF3018D007F9EBE /* DNavigationController.m */; };
-		3CB599A21DF30229007F9EBE /* DTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB599A11DF30229007F9EBE /* DTabBarController.m */; };
 		3CB599A51DF302F7007F9EBE /* DBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB599A41DF302F7007F9EBE /* DBadgeButton.m */; };
 		3CB599A81DF30ED6007F9EBE /* DContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB599A71DF30ED6007F9EBE /* DContainerViewController.m */; };
 		3CB599AC1DF30F02007F9EBE /* DScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB599AB1DF30F02007F9EBE /* DScrollMenuView.m */; };
@@ -177,6 +241,135 @@
 		07B2D4FA1B13172400BB2DD3 /* DStarNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2D4FF1B13172400BB2DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B2D5001B13172400BB2DD3 /* StarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarTests.m; sourceTree = "<group>"; };
+		3C2F40BD1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Helper.h"; sourceTree = "<group>"; };
+		3C2F40BE1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Helper.m"; sourceTree = "<group>"; };
+		3C2F40C01E3ED9670054CEB6 /* DLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLeftMenuViewController.h; sourceTree = "<group>"; };
+		3C2F40C11E3ED9670054CEB6 /* DLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLeftMenuViewController.m; sourceTree = "<group>"; };
+		3C2F40C51E3EDFD10054CEB6 /* DHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHeadView.h; sourceTree = "<group>"; };
+		3C2F40C61E3EDFD10054CEB6 /* DHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHeadView.m; sourceTree = "<group>"; };
+		3C2F40C81E3EE02C0054CEB6 /* DPlayMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPlayMusicView.h; sourceTree = "<group>"; };
+		3C2F40C91E3EE02C0054CEB6 /* DPlayMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPlayMusicView.m; sourceTree = "<group>"; };
+		3C2F40CF1E3EE3EA0054CEB6 /* DSongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSongModel.h; sourceTree = "<group>"; };
+		3C2F40D01E3EE3EA0054CEB6 /* DSongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSongModel.m; sourceTree = "<group>"; };
+		3C2F40D21E3EE46A0054CEB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3C2F40D81E3EE66A0054CEB6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		3C2F40D91E3EE66A0054CEB6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		3C2F40DA1E3EE66A0054CEB6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		3C2F40DB1E3EE66A0054CEB6 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		3C2F40DC1E3EE66A0054CEB6 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		3C2F40DD1E3EE66A0054CEB6 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		3C2F40DE1E3EE66A0054CEB6 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		3C2F40DF1E3EE66A0054CEB6 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		3C2F40E01E3EE66A0054CEB6 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		3C2F40E11E3EE66A0054CEB6 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		3C2F40E21E3EE66A0054CEB6 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		3C2F40E31E3EE66A0054CEB6 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		3C2F40E41E3EE66A0054CEB6 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		3C2F40E51E3EE66A0054CEB6 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		3C2F40E61E3EE66A0054CEB6 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		3C2F40E71E3EE66A0054CEB6 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		3C2F40E81E3EE66A0054CEB6 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		3C2F40E91E3EE66A0054CEB6 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		3C2F40EA1E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		3C2F40EB1E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		3C2F40EC1E3EE66A0054CEB6 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		3C2F40ED1E3EE66A0054CEB6 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		3C2F40EE1E3EE66A0054CEB6 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		3C2F40F81E3EEC900054CEB6 /* DSideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSideMenuTableViewCell.h; sourceTree = "<group>"; };
+		3C2F40F91E3EEC900054CEB6 /* DSideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSideMenuTableViewCell.m; sourceTree = "<group>"; };
+		3C2F40FA1E3EEC900054CEB6 /* DSideMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		3C2F40FD1E3F14750054CEB6 /* DAllControllersTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAllControllersTool.h; sourceTree = "<group>"; };
+		3C2F40FE1E3F14750054CEB6 /* DAllControllersTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAllControllersTool.m; sourceTree = "<group>"; };
+		3C2F41011E3F38830054CEB6 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		3C2F41021E3F38830054CEB6 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		3C2F41031E3F38830054CEB6 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		3C2F41041E3F38830054CEB6 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		3C2F41051E3F38830054CEB6 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		3C2F41061E3F38830054CEB6 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		3C2F41071E3F38830054CEB6 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		3C2F41081E3F38830054CEB6 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		3C2F41091E3F38830054CEB6 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		3C2F41101E4319800054CEB6 /* DVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVideoPlayerViewController.h; sourceTree = "<group>"; };
+		3C2F41111E4319800054CEB6 /* DVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVideoPlayerViewController.m; sourceTree = "<group>"; };
+		3C2F41131E431A070054CEB6 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
+		3C2F41141E431A070054CEB6 /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
+		3C2F41171E431AA60054CEB6 /* DSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSlider.h; sourceTree = "<group>"; };
+		3C2F41181E431AA60054CEB6 /* DSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSlider.m; sourceTree = "<group>"; };
+		3C2F411A1E431ADD0054CEB6 /* DVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVideoPlayer.h; sourceTree = "<group>"; };
+		3C2F411B1E431ADD0054CEB6 /* DVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVideoPlayer.m; sourceTree = "<group>"; };
+		3C2F411D1E46A8EA0054CEB6 /* DVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVideoCell.h; sourceTree = "<group>"; };
+		3C2F411E1E46A8EA0054CEB6 /* DVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVideoCell.m; sourceTree = "<group>"; };
+		3C2F411F1E46A8EA0054CEB6 /* DVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVideoCell.xib; sourceTree = "<group>"; };
+		3C2F41231E46A9360054CEB6 /* DVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVideoItem.h; sourceTree = "<group>"; };
+		3C2F41241E46A9360054CEB6 /* DVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVideoItem.m; sourceTree = "<group>"; };
+		3C2F41261E46BA160054CEB6 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		3C2F41271E46BA160054CEB6 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		3C2F412A1E46BE500054CEB6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3C2F412C1E46BE500054CEB6 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		3C2F412D1E46BE500054CEB6 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		3C2F412E1E46BE500054CEB6 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		3C2F412F1E46BE510054CEB6 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		3C2F41301E46BE510054CEB6 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		3C2F41311E46BE510054CEB6 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		3C2F41321E46BE510054CEB6 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		3C2F41331E46BE510054CEB6 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		3C2F41341E46BE510054CEB6 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		3C2F41351E46BE510054CEB6 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		3C2F41361E46BE510054CEB6 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		3C2F41371E46BE510054CEB6 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		3C2F41381E46BE510054CEB6 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		3C2F41391E46BE510054CEB6 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		3C2F413A1E46BE510054CEB6 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		3C2F413B1E46BE510054CEB6 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		3C2F413C1E46BE510054CEB6 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		3C2F413D1E46BE510054CEB6 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		3C2F413E1E46BE510054CEB6 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		3C2F413F1E46BE510054CEB6 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		3C2F41401E46BE510054CEB6 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		3C2F41411E46BE510054CEB6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3C2F414E1E484B360054CEB6 /* UIImage+LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LevelView.h"; sourceTree = "<group>"; };
+		3C2F414F1E484B360054CEB6 /* UIImage+LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LevelView.m"; sourceTree = "<group>"; };
+		3C2F41531E4A0DD50054CEB6 /* DRadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioViewController.h; sourceTree = "<group>"; };
+		3C2F41541E4A0DD50054CEB6 /* DRadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioViewController.m; sourceTree = "<group>"; };
+		3C2F41561E4A100A0054CEB6 /* DRadioSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioSecondViewController.h; sourceTree = "<group>"; };
+		3C2F41571E4A100A0054CEB6 /* DRadioSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioSecondViewController.m; sourceTree = "<group>"; };
+		3C2F415A1E4A10720054CEB6 /* DRadioSecondRadioInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioSecondRadioInfo.h; sourceTree = "<group>"; };
+		3C2F415B1E4A10720054CEB6 /* DRadioSecondRadioInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioSecondRadioInfo.m; sourceTree = "<group>"; };
+		3C2F415D1E4A10B30054CEB6 /* DRadioSecondListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioSecondListModel.h; sourceTree = "<group>"; };
+		3C2F415E1E4A10B30054CEB6 /* DRadioSecondListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioSecondListModel.m; sourceTree = "<group>"; };
+		3C2F41601E4A111C0054CEB6 /* DRadioAllList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioAllList.h; sourceTree = "<group>"; };
+		3C2F41611E4A111C0054CEB6 /* DRadioAllList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioAllList.m; sourceTree = "<group>"; };
+		3C2F41641E4A12120054CEB6 /* DRadioUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioUserInfo.h; sourceTree = "<group>"; };
+		3C2F41651E4A12120054CEB6 /* DRadioUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioUserInfo.m; sourceTree = "<group>"; };
+		3C2F41671E4A126A0054CEB6 /* DRadioListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioListCell.h; sourceTree = "<group>"; };
+		3C2F41681E4A126A0054CEB6 /* DRadioListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioListCell.m; sourceTree = "<group>"; };
+		3C2F41691E4A126A0054CEB6 /* DRadioListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRadioListCell.xib; sourceTree = "<group>"; };
+		3C2F416C1E4A17CC0054CEB6 /* RadioCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCarousel.h; sourceTree = "<group>"; };
+		3C2F416D1E4A17CC0054CEB6 /* RadioCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCarousel.m; sourceTree = "<group>"; };
+		3C2F416F1E4A95E60054CEB6 /* DRadioSecondHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioSecondHeaderView.h; sourceTree = "<group>"; };
+		3C2F41701E4A95E60054CEB6 /* DRadioSecondHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioSecondHeaderView.m; sourceTree = "<group>"; };
+		3C2F41721E4A970C0054CEB6 /* userinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userinfo.h; sourceTree = "<group>"; };
+		3C2F41731E4A970C0054CEB6 /* userinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userinfo.m; sourceTree = "<group>"; };
+		3C2F41751E4A9E3D0054CEB6 /* DRadioThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRadioThirdViewController.h; sourceTree = "<group>"; };
+		3C2F41761E4A9E3D0054CEB6 /* DRadioThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRadioThirdViewController.m; sourceTree = "<group>"; };
+		3C2F41781E4A9F8C0054CEB6 /* RadioSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioSecondCell.h; sourceTree = "<group>"; };
+		3C2F41791E4A9F8C0054CEB6 /* RadioSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioSecondCell.m; sourceTree = "<group>"; };
+		3C2F417A1E4A9F8C0054CEB6 /* RadioSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioSecondCell.xib; sourceTree = "<group>"; };
+		3C2F417D1E4ABA880054CEB6 /* RadioMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioMusicView.h; sourceTree = "<group>"; };
+		3C2F417E1E4ABA880054CEB6 /* RadioMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioMusicView.m; sourceTree = "<group>"; };
+		3C2F41801E4ABAFB0054CEB6 /* MusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManager.h; sourceTree = "<group>"; };
+		3C2F41811E4ABAFB0054CEB6 /* MusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManager.m; sourceTree = "<group>"; };
+		3C2F41831E4ABB6C0054CEB6 /* MusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicView.h; sourceTree = "<group>"; };
+		3C2F41841E4ABB6C0054CEB6 /* MusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicView.m; sourceTree = "<group>"; };
+		3C2F41861E4ABBCB0054CEB6 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
+		3C2F41871E4ABBCB0054CEB6 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
+		3C2F418A1E4C038B0054CEB6 /* D0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = D0.txt; sourceTree = "<group>"; };
+		3C2F418C1E4C41BA0054CEB6 /* DLaunchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLaunchingViewController.h; sourceTree = "<group>"; };
+		3C2F418D1E4C41BA0054CEB6 /* DLaunchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLaunchingViewController.m; sourceTree = "<group>"; };
+		3C2F418F1E4C47EA0054CEB6 /* DAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAppStore.h; sourceTree = "<group>"; };
+		3C2F41901E4C47EA0054CEB6 /* DAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAppStore.m; sourceTree = "<group>"; };
+		3C2F41921E4C4EA40054CEB6 /* DWebControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWebControllers.h; sourceTree = "<group>"; };
+		3C2F41931E4C4EA40054CEB6 /* DWebControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWebControllers.m; sourceTree = "<group>"; };
 		3C9EFEA61DF3AD4A000802E1 /* DBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBaseCollectionViewController.h; sourceTree = "<group>"; };
 		3C9EFEA71DF3AD4A000802E1 /* DBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBaseCollectionViewController.m; sourceTree = "<group>"; };
 		3C9EFEA91DF3B275000802E1 /* DStarPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarPhotosViewController.h; sourceTree = "<group>"; };
@@ -400,8 +593,6 @@
 		3CB5999A1DF2FBB7007F9EBE /* DOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOtherViewController.m; sourceTree = "<group>"; };
 		3CB5999D1DF3018D007F9EBE /* DNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNavigationController.h; sourceTree = "<group>"; };
 		3CB5999E1DF3018D007F9EBE /* DNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNavigationController.m; sourceTree = "<group>"; };
-		3CB599A01DF30229007F9EBE /* DTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTabBarController.h; sourceTree = "<group>"; };
-		3CB599A11DF30229007F9EBE /* DTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTabBarController.m; sourceTree = "<group>"; };
 		3CB599A31DF302F7007F9EBE /* DBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBadgeButton.h; sourceTree = "<group>"; };
 		3CB599A41DF302F7007F9EBE /* DBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBadgeButton.m; sourceTree = "<group>"; };
 		3CB599A61DF30ED6007F9EBE /* DContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DContainerViewController.h; sourceTree = "<group>"; };
@@ -436,6 +627,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2F40D31E3EE46A0054CEB6 /* AVFoundation.framework in Frameworks */,
 				3C9EFF7A1DF56492000802E1 /* libsqlite3.tbd in Frameworks */,
 				3C9EFF521DF56236000802E1 /* libz.tbd in Frameworks */,
 				3C9EFF781DF563DF000802E1 /* libicucore.tbd in Frameworks */,
@@ -538,8 +730,10 @@
 		07B2D50A1B131C0800BB2DD3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F41511E4A0CE80054CEB6 /* DRadio(电台） */,
 				3CB5999C1DF30104007F9EBE /* APP(入口) */,
-				3CB598D61DF2CC62007F9EBE /* DHome(首页) */,
+				3C2F410E1E43182A0054CEB6 /* DLVideoPlayer(视频列表) */,
+				3CB598D61DF2CC62007F9EBE /* DHome(资讯) */,
 				3C9EFED11DF3FF47000802E1 /* DStarRanking(排名) */,
 				3C9EFEA41DF31F00000802E1 /* DGallery(图片壁纸) */,
 				3C9EFF151DF4507C000802E1 /* Me(设置) */,
@@ -547,6 +741,260 @@
 				3CB598D71DF2D10B007F9EBE /* DLibs(第三方) */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		3C2F40BC1E3ED5A90054CEB6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41001E3F38830054CEB6 /* MMDrawerController */,
+				3C2F40BD1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.h */,
+				3C2F40BE1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.m */,
+				3C2F40FD1E3F14750054CEB6 /* DAllControllersTool.h */,
+				3C2F40FE1E3F14750054CEB6 /* DAllControllersTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		3C2F40C31E3EDA140054CEB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3CB5999D1DF3018D007F9EBE /* DNavigationController.h */,
+				3CB5999E1DF3018D007F9EBE /* DNavigationController.m */,
+				3C2F40C01E3ED9670054CEB6 /* DLeftMenuViewController.h */,
+				3C2F40C11E3ED9670054CEB6 /* DLeftMenuViewController.m */,
+				3C2F418C1E4C41BA0054CEB6 /* DLaunchingViewController.h */,
+				3C2F418D1E4C41BA0054CEB6 /* DLaunchingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C2F40C41E3EDA210054CEB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F40C51E3EDFD10054CEB6 /* DHeadView.h */,
+				3C2F40C61E3EDFD10054CEB6 /* DHeadView.m */,
+				3C2F40C81E3EE02C0054CEB6 /* DPlayMusicView.h */,
+				3C2F40C91E3EE02C0054CEB6 /* DPlayMusicView.m */,
+				3C2F40F81E3EEC900054CEB6 /* DSideMenuTableViewCell.h */,
+				3C2F40F91E3EEC900054CEB6 /* DSideMenuTableViewCell.m */,
+				3C2F40FA1E3EEC900054CEB6 /* DSideMenuTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C2F40CB1E3EE07C0054CEB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F40CF1E3EE3EA0054CEB6 /* DSongModel.h */,
+				3C2F40D01E3EE3EA0054CEB6 /* DSongModel.m */,
+				3C2F418F1E4C47EA0054CEB6 /* DAppStore.h */,
+				3C2F41901E4C47EA0054CEB6 /* DAppStore.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3C2F40D71E3EE66A0054CEB6 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F40D81E3EE66A0054CEB6 /* MASCompositeConstraint.h */,
+				3C2F40D91E3EE66A0054CEB6 /* MASCompositeConstraint.m */,
+				3C2F40DA1E3EE66A0054CEB6 /* MASConstraint+Private.h */,
+				3C2F40DB1E3EE66A0054CEB6 /* MASConstraint.h */,
+				3C2F40DC1E3EE66A0054CEB6 /* MASConstraint.m */,
+				3C2F40DD1E3EE66A0054CEB6 /* MASConstraintMaker.h */,
+				3C2F40DE1E3EE66A0054CEB6 /* MASConstraintMaker.m */,
+				3C2F40DF1E3EE66A0054CEB6 /* MASLayoutConstraint.h */,
+				3C2F40E01E3EE66A0054CEB6 /* MASLayoutConstraint.m */,
+				3C2F40E11E3EE66A0054CEB6 /* Masonry.h */,
+				3C2F40E21E3EE66A0054CEB6 /* MASUtilities.h */,
+				3C2F40E31E3EE66A0054CEB6 /* MASViewAttribute.h */,
+				3C2F40E41E3EE66A0054CEB6 /* MASViewAttribute.m */,
+				3C2F40E51E3EE66A0054CEB6 /* MASViewConstraint.h */,
+				3C2F40E61E3EE66A0054CEB6 /* MASViewConstraint.m */,
+				3C2F40E71E3EE66A0054CEB6 /* NSArray+MASAdditions.h */,
+				3C2F40E81E3EE66A0054CEB6 /* NSArray+MASAdditions.m */,
+				3C2F40E91E3EE66A0054CEB6 /* NSArray+MASShorthandAdditions.h */,
+				3C2F40EA1E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				3C2F40EB1E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				3C2F40EC1E3EE66A0054CEB6 /* View+MASAdditions.h */,
+				3C2F40ED1E3EE66A0054CEB6 /* View+MASAdditions.m */,
+				3C2F40EE1E3EE66A0054CEB6 /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		3C2F41001E3F38830054CEB6 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41011E3F38830054CEB6 /* MMDrawerBarButtonItem.h */,
+				3C2F41021E3F38830054CEB6 /* MMDrawerBarButtonItem.m */,
+				3C2F41031E3F38830054CEB6 /* MMDrawerController+Subclass.h */,
+				3C2F41041E3F38830054CEB6 /* MMDrawerController.h */,
+				3C2F41051E3F38830054CEB6 /* MMDrawerController.m */,
+				3C2F41061E3F38830054CEB6 /* MMDrawerVisualState.h */,
+				3C2F41071E3F38830054CEB6 /* MMDrawerVisualState.m */,
+				3C2F41081E3F38830054CEB6 /* UIViewController+MMDrawerController.h */,
+				3C2F41091E3F38830054CEB6 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		3C2F410E1E43182A0054CEB6 /* DLVideoPlayer(视频列表) */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41221E46A9070054CEB6 /* Model */,
+				3C2F41161E431A770054CEB6 /* View */,
+				3C2F410F1E4318650054CEB6 /* Controller */,
+			);
+			name = "DLVideoPlayer(视频列表)";
+			path = Star/Classes/DLVideoPlayer;
+			sourceTree = SOURCE_ROOT;
+		};
+		3C2F410F1E4318650054CEB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41101E4319800054CEB6 /* DVideoPlayerViewController.h */,
+				3C2F41111E4319800054CEB6 /* DVideoPlayerViewController.m */,
+				3C2F41131E431A070054CEB6 /* VideoDetailViewController.h */,
+				3C2F41141E431A070054CEB6 /* VideoDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C2F41161E431A770054CEB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41171E431AA60054CEB6 /* DSlider.h */,
+				3C2F41181E431AA60054CEB6 /* DSlider.m */,
+				3C2F411A1E431ADD0054CEB6 /* DVideoPlayer.h */,
+				3C2F411B1E431ADD0054CEB6 /* DVideoPlayer.m */,
+				3C2F411D1E46A8EA0054CEB6 /* DVideoCell.h */,
+				3C2F411E1E46A8EA0054CEB6 /* DVideoCell.m */,
+				3C2F411F1E46A8EA0054CEB6 /* DVideoCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C2F41221E46A9070054CEB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41231E46A9360054CEB6 /* DVideoItem.h */,
+				3C2F41241E46A9360054CEB6 /* DVideoItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3C2F41291E46BE500054CEB6 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F412A1E46BE500054CEB6 /* LICENSE */,
+				3C2F412B1E46BE500054CEB6 /* MJExtension */,
+				3C2F41411E46BE510054CEB6 /* README.md */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		3C2F412B1E46BE500054CEB6 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F412C1E46BE500054CEB6 /* MJExtension.h */,
+				3C2F412D1E46BE500054CEB6 /* MJExtensionConst.h */,
+				3C2F412E1E46BE500054CEB6 /* MJExtensionConst.m */,
+				3C2F412F1E46BE510054CEB6 /* MJFoundation.h */,
+				3C2F41301E46BE510054CEB6 /* MJFoundation.m */,
+				3C2F41311E46BE510054CEB6 /* MJProperty.h */,
+				3C2F41321E46BE510054CEB6 /* MJProperty.m */,
+				3C2F41331E46BE510054CEB6 /* MJPropertyKey.h */,
+				3C2F41341E46BE510054CEB6 /* MJPropertyKey.m */,
+				3C2F41351E46BE510054CEB6 /* MJPropertyType.h */,
+				3C2F41361E46BE510054CEB6 /* MJPropertyType.m */,
+				3C2F41371E46BE510054CEB6 /* NSObject+MJClass.h */,
+				3C2F41381E46BE510054CEB6 /* NSObject+MJClass.m */,
+				3C2F41391E46BE510054CEB6 /* NSObject+MJCoding.h */,
+				3C2F413A1E46BE510054CEB6 /* NSObject+MJCoding.m */,
+				3C2F413B1E46BE510054CEB6 /* NSObject+MJKeyValue.h */,
+				3C2F413C1E46BE510054CEB6 /* NSObject+MJKeyValue.m */,
+				3C2F413D1E46BE510054CEB6 /* NSObject+MJProperty.h */,
+				3C2F413E1E46BE510054CEB6 /* NSObject+MJProperty.m */,
+				3C2F413F1E46BE510054CEB6 /* NSString+MJExtension.h */,
+				3C2F41401E46BE510054CEB6 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		3C2F41511E4A0CE80054CEB6 /* DRadio(电台） */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41891E4C03810054CEB6 /* Tool */,
+				3C2F41631E4A118E0054CEB6 /* View */,
+				3C2F41591E4A104E0054CEB6 /* Model */,
+				3C2F41521E4A0D180054CEB6 /* Controller */,
+			);
+			name = "DRadio(电台）";
+			path = Star/Classes/DRadio;
+			sourceTree = SOURCE_ROOT;
+		};
+		3C2F41521E4A0D180054CEB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41531E4A0DD50054CEB6 /* DRadioViewController.h */,
+				3C2F41541E4A0DD50054CEB6 /* DRadioViewController.m */,
+				3C2F41561E4A100A0054CEB6 /* DRadioSecondViewController.h */,
+				3C2F41571E4A100A0054CEB6 /* DRadioSecondViewController.m */,
+				3C2F41751E4A9E3D0054CEB6 /* DRadioThirdViewController.h */,
+				3C2F41761E4A9E3D0054CEB6 /* DRadioThirdViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C2F41591E4A104E0054CEB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41861E4ABBCB0054CEB6 /* SongModel.h */,
+				3C2F41871E4ABBCB0054CEB6 /* SongModel.m */,
+				3C2F41801E4ABAFB0054CEB6 /* MusicManager.h */,
+				3C2F41811E4ABAFB0054CEB6 /* MusicManager.m */,
+				3C2F41601E4A111C0054CEB6 /* DRadioAllList.h */,
+				3C2F41611E4A111C0054CEB6 /* DRadioAllList.m */,
+				3C2F415A1E4A10720054CEB6 /* DRadioSecondRadioInfo.h */,
+				3C2F415B1E4A10720054CEB6 /* DRadioSecondRadioInfo.m */,
+				3C2F415D1E4A10B30054CEB6 /* DRadioSecondListModel.h */,
+				3C2F415E1E4A10B30054CEB6 /* DRadioSecondListModel.m */,
+				3C2F41641E4A12120054CEB6 /* DRadioUserInfo.h */,
+				3C2F41651E4A12120054CEB6 /* DRadioUserInfo.m */,
+				3C2F416C1E4A17CC0054CEB6 /* RadioCarousel.h */,
+				3C2F416D1E4A17CC0054CEB6 /* RadioCarousel.m */,
+				3C2F41721E4A970C0054CEB6 /* userinfo.h */,
+				3C2F41731E4A970C0054CEB6 /* userinfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3C2F41631E4A118E0054CEB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F41831E4ABB6C0054CEB6 /* MusicView.h */,
+				3C2F41841E4ABB6C0054CEB6 /* MusicView.m */,
+				3C2F417D1E4ABA880054CEB6 /* RadioMusicView.h */,
+				3C2F417E1E4ABA880054CEB6 /* RadioMusicView.m */,
+				3C2F416F1E4A95E60054CEB6 /* DRadioSecondHeaderView.h */,
+				3C2F41701E4A95E60054CEB6 /* DRadioSecondHeaderView.m */,
+				3C2F41671E4A126A0054CEB6 /* DRadioListCell.h */,
+				3C2F41681E4A126A0054CEB6 /* DRadioListCell.m */,
+				3C2F41691E4A126A0054CEB6 /* DRadioListCell.xib */,
+				3C2F41781E4A9F8C0054CEB6 /* RadioSecondCell.h */,
+				3C2F41791E4A9F8C0054CEB6 /* RadioSecondCell.m */,
+				3C2F417A1E4A9F8C0054CEB6 /* RadioSecondCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C2F41891E4C03810054CEB6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F418A1E4C038B0054CEB6 /* D0.txt */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		3C9EFEA41DF31F00000802E1 /* DGallery(图片壁纸) */ = {
@@ -705,6 +1153,8 @@
 				3C9EFF181DF452AA000802E1 /* MeViewController.h */,
 				3C9EFF191DF452AA000802E1 /* MeViewController.m */,
 				3C9EFF1A1DF452AA000802E1 /* MeViewController.xib */,
+				3C2F41921E4C4EA40054CEB6 /* DWebControllers.h */,
+				3C2F41931E4C4EA40054CEB6 /* DWebControllers.m */,
 				3C9EFF2E1DF50B49000802E1 /* WebAgreementController.h */,
 				3C9EFF2F1DF50B49000802E1 /* WebAgreementController.m */,
 				3C9EFF331DF50C11000802E1 /* AboutOurViewController.h */,
@@ -744,6 +1194,7 @@
 		3C9EFF4C1DF561F6000802E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F40D21E3EE46A0054CEB6 /* AVFoundation.framework */,
 				3C9EFF791DF56492000802E1 /* libsqlite3.tbd */,
 				3C9EFF771DF563DF000802E1 /* libicucore.tbd */,
 				3C9EFF751DF563BE000802E1 /* libxml2.2.tbd */,
@@ -771,7 +1222,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3CB598D61DF2CC62007F9EBE /* DHome(首页) */ = {
+		3CB598D61DF2CC62007F9EBE /* DHome(资讯) */ = {
 			isa = PBXGroup;
 			children = (
 				3CB599C21DF313EF007F9EBE /* Model */,
@@ -779,13 +1230,15 @@
 				3CB599A91DF30EE0007F9EBE /* View */,
 				3CB5997E1DF2D1E4007F9EBE /* Controller */,
 			);
-			name = "DHome(首页)";
+			name = "DHome(资讯)";
 			path = Home;
 			sourceTree = "<group>";
 		};
 		3CB598D71DF2D10B007F9EBE /* DLibs(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F41291E46BE500054CEB6 /* MJExtension */,
+				3C2F40D71E3EE66A0054CEB6 /* Masonry */,
 				3C9EFF491DF56062000802E1 /* jpush-ios-2.2.0.a */,
 				3C9EFF4A1DF56062000802E1 /* JPUSHService.h */,
 				3C9EFF471DF53A32000802E1 /* UMMobClick.framework */,
@@ -840,6 +1293,8 @@
 		3CB598EF1DF2D10B007F9EBE /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F414E1E484B360054CEB6 /* UIImage+LevelView.h */,
+				3C2F414F1E484B360054CEB6 /* UIImage+LevelView.m */,
 				3CB599851DF2E7FC007F9EBE /* NSMutableString+ReplaceByString.h */,
 				3CB599861DF2E7FC007F9EBE /* NSMutableString+ReplaceByString.m */,
 				3CB599871DF2E7FC007F9EBE /* NSString+Extension.h */,
@@ -994,6 +1449,8 @@
 			isa = PBXGroup;
 			children = (
 				3CB599981DF2E92F007F9EBE /* Macro.h */,
+				3C2F41261E46BA160054CEB6 /* Business.h */,
+				3C2F41271E46BA160054CEB6 /* Business.m */,
 				3CB599A31DF302F7007F9EBE /* DBadgeButton.h */,
 				3CB599A41DF302F7007F9EBE /* DBadgeButton.m */,
 			);
@@ -1004,13 +1461,13 @@
 		3CB5999C1DF30104007F9EBE /* APP(入口) */ = {
 			isa = PBXGroup;
 			children = (
-				3CB5993F1DF2D10B007F9EBE /* StarIntroduction */,
 				3C9EFF121DF45042000802E1 /* AppDelegate.h */,
 				3C9EFF131DF45042000802E1 /* AppDelegate.m */,
-				3CB5999D1DF3018D007F9EBE /* DNavigationController.h */,
-				3CB5999E1DF3018D007F9EBE /* DNavigationController.m */,
-				3CB599A01DF30229007F9EBE /* DTabBarController.h */,
-				3CB599A11DF30229007F9EBE /* DTabBarController.m */,
+				3C2F40CB1E3EE07C0054CEB6 /* Model */,
+				3C2F40C41E3EDA210054CEB6 /* View */,
+				3C2F40C31E3EDA140054CEB6 /* Controller */,
+				3C2F40BC1E3ED5A90054CEB6 /* Tool */,
+				3CB5993F1DF2D10B007F9EBE /* StarIntroduction */,
 			);
 			name = "APP(入口)";
 			path = Star/Classes/APP;
@@ -1105,6 +1562,7 @@
 				TargetAttributes = {
 					07B2D4DD1B13172400BB2DD3 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 5C8MEP9CRW;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1148,13 +1606,19 @@
 				3CB599581DF2D10B007F9EBE /* MJRefresh.bundle in Resources */,
 				3C9EFF1F1DF452AA000802E1 /* MeViewController.xib in Resources */,
 				3C9EFF0E1DF4215A000802E1 /* StarDetailViewController.xib in Resources */,
+				3C2F416B1E4A126A0054CEB6 /* DRadioListCell.xib in Resources */,
 				3C9EFF371DF50C11000802E1 /* AboutOurViewController.xib in Resources */,
 				07B2D4F21B13172400BB2DD3 /* Images.xcassets in Resources */,
+				3C2F417C1E4A9F8C0054CEB6 /* RadioSecondCell.xib in Resources */,
+				3C2F40FC1E3EEC900054CEB6 /* DSideMenuTableViewCell.xib in Resources */,
 				3C9EFF421DF536AE000802E1 /* 37x-Checkmark.png in Resources */,
+				3C2F41421E46BE510054CEB6 /* LICENSE in Resources */,
 				3C9EFF431DF536AE000802E1 /* 37x-Checkmark@2x.png in Resources */,
 				3C9EFF2D1DF46BC8000802E1 /* WDMiddleCell.xib in Resources */,
 				3C9EFF021DF42126000802E1 /* RankingsCell.xib in Resources */,
 				3C9EFF101DF4215A000802E1 /* StarInfoViewController.xib in Resources */,
+				3C2F418B1E4C038B0054CEB6 /* D0.txt in Resources */,
+				3C2F41211E46A8EA0054CEB6 /* DVideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,87 +1637,133 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9EFF301DF50B49000802E1 /* WebAgreementController.m in Sources */,
+				3C2F41551E4A0DD50054CEB6 /* DRadioViewController.m in Sources */,
 				3CB5994F1DF2D10B007F9EBE /* AFURLConnectionOperation.m in Sources */,
 				3CB599601DF2D10B007F9EBE /* TAAbstractDotView.m in Sources */,
 				3CB5995C1DF2D10B007F9EBE /* MJRefreshHeaderView.m in Sources */,
+				3C2F41821E4ABAFB0054CEB6 /* MusicManager.m in Sources */,
 				3C9EFF451DF536AE000802E1 /* UIView+MBProgressHUD.m in Sources */,
 				3CB5996F1DF2D10B007F9EBE /* SDWebImagePrefetcher.m in Sources */,
+				3C2F410D1E3F38830054CEB6 /* UIViewController+MMDrawerController.m in Sources */,
 				3C9EFEF61DF420CA000802E1 /* Ranking.m in Sources */,
 				07B2D4EA1B13172400BB2DD3 /* Star.xcdatamodeld in Sources */,
+				3C2F41471E46BE510054CEB6 /* MJPropertyType.m in Sources */,
+				3C2F41441E46BE510054CEB6 /* MJFoundation.m in Sources */,
 				3C9EFF0F1DF4215A000802E1 /* StarInfoViewController.m in Sources */,
 				3CB5994E1DF2D10B007F9EBE /* AFSecurityPolicy.m in Sources */,
 				3CB599C81DF31413007F9EBE /* NewsDetail.m in Sources */,
+				3C2F416E1E4A17CC0054CEB6 /* RadioCarousel.m in Sources */,
 				3CB599841DF2E09D007F9EBE /* DNewestViewController.m in Sources */,
 				3CB599B91DF31366007F9EBE /* DHotsHeaderOtherTool.m in Sources */,
+				3C2F410A1E3F38830054CEB6 /* MMDrawerBarButtonItem.m in Sources */,
 				3CB5997A1DF2D10B007F9EBE /* XPathQuery.m in Sources */,
+				3C2F40CA1E3EE02C0054CEB6 /* DPlayMusicView.m in Sources */,
+				3C2F40F41E3EE66A0054CEB6 /* MASViewConstraint.m in Sources */,
 				3CB5999F1DF3018D007F9EBE /* DNavigationController.m in Sources */,
+				3C2F41121E4319800054CEB6 /* DVideoPlayerViewController.m in Sources */,
 				3CB599B81DF31366007F9EBE /* DHotsDetailTool.m in Sources */,
 				3CB5995B1DF2D10B007F9EBE /* MJRefreshFooterView.m in Sources */,
 				3C9EFEB11DF3B898000802E1 /* DPictureViewController.m in Sources */,
+				3C2F40FF1E3F14750054CEB6 /* DAllControllersTool.m in Sources */,
 				3CB599931DF2E7FC007F9EBE /* UIColor+ZN.m in Sources */,
 				3CB599961DF2E7FC007F9EBE /* UIViewController+ZN.m in Sources */,
 				3C9EFEC91DF3C198000802E1 /* ToolOfPhotos.m in Sources */,
+				3C2F40F21E3EE66A0054CEB6 /* MASLayoutConstraint.m in Sources */,
+				3C2F41941E4C4EA40054CEB6 /* DWebControllers.m in Sources */,
 				3CB599951DF2E7FC007F9EBE /* UIView+MJ.m in Sources */,
+				3C2F41431E46BE510054CEB6 /* MJExtensionConst.m in Sources */,
 				3C9EFEDC1DF40F5A000802E1 /* DWallpaperCell.m in Sources */,
+				3C2F40EF1E3EE66A0054CEB6 /* MASCompositeConstraint.m in Sources */,
+				3C2F41661E4A12120054CEB6 /* DRadioUserInfo.m in Sources */,
 				3CB599691DF2D10B007F9EBE /* SDImageCache.m in Sources */,
 				3CB599AC1DF30F02007F9EBE /* DScrollMenuView.m in Sources */,
 				3CB599701DF2D10B007F9EBE /* UIButton+WebCache.m in Sources */,
 				3CB599511DF2D10B007F9EBE /* AFURLResponseSerialization.m in Sources */,
-				3CB599A21DF30229007F9EBE /* DTabBarController.m in Sources */,
 				3C9EFF111DF4215A000802E1 /* StarRankingViewController.m in Sources */,
+				3C2F40C21E3ED9670054CEB6 /* DLeftMenuViewController.m in Sources */,
+				3C2F41501E484B360054CEB6 /* UIImage+LevelView.m in Sources */,
+				3C2F410C1E3F38830054CEB6 /* MMDrawerVisualState.m in Sources */,
 				3CB599491DF2D10B007F9EBE /* AFNetMonitor.m in Sources */,
 				3CB599521DF2D10B007F9EBE /* AFURLSessionManager.m in Sources */,
+				3C2F41281E46BA160054CEB6 /* Business.m in Sources */,
 				3C9EFF1E1DF452AA000802E1 /* MeViewController.m in Sources */,
 				3C9EFF361DF50C11000802E1 /* AboutOurViewController.m in Sources */,
 				3CB599721DF2D10B007F9EBE /* UIImage+MultiFormat.m in Sources */,
 				3C9EFEEB1DF42094000802E1 /* StarInfoTool.m in Sources */,
 				3CB599B61DF31366007F9EBE /* DHeaderScrollTool.m in Sources */,
+				3C2F41251E46A9360054CEB6 /* DVideoItem.m in Sources */,
 				3CB599591DF2D10B007F9EBE /* MJRefreshBaseView.m in Sources */,
 				3C9EFEEA1DF42094000802E1 /* StarDetailTool.m in Sources */,
 				3CB599631DF2D10B007F9EBE /* TAPageControl.m in Sources */,
+				3C2F40F71E3EE66A0054CEB6 /* View+MASAdditions.m in Sources */,
 				3C9EFF0D1DF4215A000802E1 /* StarDetailViewController.m in Sources */,
+				3C2F40C71E3EDFD10054CEB6 /* DHeadView.m in Sources */,
 				3CB599771DF2D10B007F9EBE /* DIntroductionViewController.m in Sources */,
+				3C2F40D11E3EE3EA0054CEB6 /* DSongModel.m in Sources */,
+				3C2F41451E46BE510054CEB6 /* MJProperty.m in Sources */,
 				3CB599791DF2D10B007F9EBE /* TFHppleElement.m in Sources */,
 				3C9EFEF81DF420CA000802E1 /* StarInfo.m in Sources */,
 				3CB5995F1DF2D10B007F9EBE /* NSData+SDDataCache.m in Sources */,
 				3CB599BF1DF313CD007F9EBE /* DHotHeaderDetailViewController.m in Sources */,
 				3C9EFECF1DF3C5B8000802E1 /* DPortraitViewController.m in Sources */,
+				3C2F414D1E46BE510054CEB6 /* README.md in Sources */,
 				3C9EFED41DF400F0000802E1 /* DStarRankingViewController.m in Sources */,
+				3C2F417B1E4A9F8C0054CEB6 /* RadioSecondCell.m in Sources */,
+				3C2F40FB1E3EEC900054CEB6 /* DSideMenuTableViewCell.m in Sources */,
 				3CB599B71DF31366007F9EBE /* DHotsDataTool.m in Sources */,
 				3CB599651DF2D10B007F9EBE /* SDCycleScrollView.m in Sources */,
 				3CB5994B1DF2D10B007F9EBE /* AFHTTPRequestOperationManager.m in Sources */,
+				3C2F41711E4A95E60054CEB6 /* DRadioSecondHeaderView.m in Sources */,
 				3CB599641DF2D10B007F9EBE /* SDCollectionViewCell.m in Sources */,
+				3C2F41491E46BE510054CEB6 /* NSObject+MJCoding.m in Sources */,
 				3CB599661DF2D10B007F9EBE /* UIView+SDExtension.m in Sources */,
+				3C2F41201E46A8EA0054CEB6 /* DVideoCell.m in Sources */,
 				3CB5994C1DF2D10B007F9EBE /* AFHTTPSessionManager.m in Sources */,
 				3C9EFED91DF40EF2000802E1 /* WallpaperCell.m in Sources */,
 				3CB5994D1DF2D10B007F9EBE /* AFNetworkReachabilityManager.m in Sources */,
+				3C2F417F1E4ABA880054CEB6 /* RadioMusicView.m in Sources */,
 				3CB5994A1DF2D10B007F9EBE /* AFHTTPRequestOperation.m in Sources */,
 				3CB599501DF2D10B007F9EBE /* AFURLRequestSerialization.m in Sources */,
 				3C9EFEBF1DF3BFCA000802E1 /* DPictureModel.m in Sources */,
 				3CB599751DF2D10B007F9EBE /* UIImageView+WebCache.m in Sources */,
 				3CB599911DF2E7FC007F9EBE /* NSMutableString+ReplaceByString.m in Sources */,
+				3C2F41911E4C47EA0054CEB6 /* DAppStore.m in Sources */,
 				3CB599621DF2D10B007F9EBE /* TADotView.m in Sources */,
 				3CB599711DF2D10B007F9EBE /* UIImage+GIF.m in Sources */,
 				3C9EFF141DF45042000802E1 /* AppDelegate.m in Sources */,
+				3C2F41881E4ABBCB0054CEB6 /* SongModel.m in Sources */,
+				3C2F41581E4A100A0054CEB6 /* DRadioSecondViewController.m in Sources */,
+				3C2F41481E46BE510054CEB6 /* NSObject+MJClass.m in Sources */,
 				3CB599CE1DF31435007F9EBE /* DLodingView.m in Sources */,
 				3CB599941DF2E7FC007F9EBE /* UIImage+stretch.m in Sources */,
 				3C9EFEEC1DF42094000802E1 /* StarSelfInfoTool.m in Sources */,
 				3CB599681DF2D10B007F9EBE /* NSData+ImageContentType.m in Sources */,
 				3CB5996C1DF2D10B007F9EBE /* SDWebImageDownloader.m in Sources */,
 				3CB599CF1DF31435007F9EBE /* DNewsCell.m in Sources */,
+				3C2F41151E431A070054CEB6 /* VideoDetailViewController.m in Sources */,
 				3CB599741DF2D10B007F9EBE /* UIImageView+HighlightedWebCache.m in Sources */,
+				3C2F411C1E431ADD0054CEB6 /* DVideoPlayer.m in Sources */,
 				3CB599A81DF30ED6007F9EBE /* DContainerViewController.m in Sources */,
 				3CB5996A1DF2D10B007F9EBE /* SDWebImageCompat.m in Sources */,
+				3C2F40BF1E3ED5BF0054CEB6 /* UIBarButtonItem+Helper.m in Sources */,
 				3C9EFEC21DF3C0B4000802E1 /* DPictureDetailModel.m in Sources */,
+				3C2F40F01E3EE66A0054CEB6 /* MASConstraint.m in Sources */,
 				3C9EFEF91DF420CA000802E1 /* StarSelfInfo.m in Sources */,
+				3C2F41741E4A970C0054CEB6 /* userinfo.m in Sources */,
 				3CB599A51DF302F7007F9EBE /* DBadgeButton.m in Sources */,
 				3C9EFEC81DF3C198000802E1 /* ToolForPictureDetail.m in Sources */,
 				3C9EFF3A1DF510E9000802E1 /* UIView+YSBlock.m in Sources */,
 				3CB5996E1DF2D10B007F9EBE /* SDWebImageManager.m in Sources */,
+				3C2F40F11E3EE66A0054CEB6 /* MASConstraintMaker.m in Sources */,
 				3C9EFF441DF536AE000802E1 /* MBProgressHUD.m in Sources */,
+				3C2F414C1E46BE510054CEB6 /* NSString+MJExtension.m in Sources */,
+				3C2F416A1E4A126A0054CEB6 /* DRadioListCell.m in Sources */,
 				3CB5996D1DF2D10B007F9EBE /* SDWebImageDownloaderOperation.m in Sources */,
 				3C9EFF271DF452F4000802E1 /* RKCardView.m in Sources */,
 				3CB599531DF2D10B007F9EBE /* UIBarButtonItem+ZN.m in Sources */,
+				3C2F415C1E4A10720054CEB6 /* DRadioSecondRadioInfo.m in Sources */,
+				3C2F410B1E3F38830054CEB6 /* MMDrawerController.m in Sources */,
+				3C2F414A1E46BE510054CEB6 /* NSObject+MJKeyValue.m in Sources */,
 				3CB599731DF2D10B007F9EBE /* UIImage+WebP.m in Sources */,
 				3C9EFF041DF42126000802E1 /* StarInfoHeaderView.m in Sources */,
 				3CB5997D1DF2D1C9007F9EBE /* DBaseViewController.m in Sources */,
@@ -1263,15 +1773,26 @@
 				3C9EFEB81DF3BC85000802E1 /* D3DScrollView.m in Sources */,
 				3CB599611DF2D10B007F9EBE /* TAAnimatedDotView.m in Sources */,
 				3CB5999B1DF2FBB7007F9EBE /* DOtherViewController.m in Sources */,
+				3C2F41191E431AA60054CEB6 /* DSlider.m in Sources */,
 				3C9EFEF71DF420CA000802E1 /* RankingDetails.m in Sources */,
 				3CB599761DF2D10B007F9EBE /* UIView+WebCacheOperation.m in Sources */,
+				3C2F40F51E3EE66A0054CEB6 /* NSArray+MASAdditions.m in Sources */,
 				3C9EFF031DF42126000802E1 /* StarInfoCell.m in Sources */,
 				3C9EFECC1DF3C29B000802E1 /* DPictureView.m in Sources */,
+				3C2F41621E4A111C0054CEB6 /* DRadioAllList.m in Sources */,
 				3C9EFEE91DF42094000802E1 /* RankingTool.m in Sources */,
+				3C2F41771E4A9E3D0054CEB6 /* DRadioThirdViewController.m in Sources */,
+				3C2F40F31E3EE66A0054CEB6 /* MASViewAttribute.m in Sources */,
+				3C2F418E1E4C41BA0054CEB6 /* DLaunchingViewController.m in Sources */,
 				3CB599671DF2D10B007F9EBE /* MKAnnotationView+WebCache.m in Sources */,
+				3C2F41461E46BE510054CEB6 /* MJPropertyKey.m in Sources */,
+				3C2F414B1E46BE510054CEB6 /* NSObject+MJProperty.m in Sources */,
 				3C9EFEAB1DF3B275000802E1 /* DStarPhotosViewController.m in Sources */,
+				3C2F40F61E3EE66A0054CEB6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				3C2F415F1E4A10B30054CEB6 /* DRadioSecondListModel.m in Sources */,
 				3CB5996B1DF2D10B007F9EBE /* SDWebImageDecoder.m in Sources */,
 				3CB599C71DF31413007F9EBE /* DNews.m in Sources */,
+				3C2F41851E4ABB6C0054CEB6 /* MusicView.m in Sources */,
 				07B2D4E41B13172400BB2DD3 /* main.m in Sources */,
 				3CB599781DF2D10B007F9EBE /* TFHpple.m in Sources */,
 				3CB5995A1DF2D10B007F9EBE /* MJRefreshConst.m in Sources */,
@@ -1404,9 +1925,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = DStarNews.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Du Chengwen (5C8MEP9CRW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Du Chengwen (5C8MEP9CRW)";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Du Chengwen (9U8CKY9V93)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Du Chengwen (9U8CKY9V93)";
+				DEVELOPMENT_TEAM = 5C8MEP9CRW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Star/Classes/DLibs",
@@ -1420,8 +1941,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevindcw.DStarNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2177d846-ea2e-4967-8c91-f4e5574e5056";
-				PROVISIONING_PROFILE_SPECIFIER = XiaoXiong;
+				PROVISIONING_PROFILE = "482f864f-2649-4f0e-a9f1-1cc57f720f7c";
+				PROVISIONING_PROFILE_SPECIFIER = XioaXiongCS;
 			};
 			name = Debug;
 		};
@@ -1431,7 +1952,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = DStarNews.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Du Chengwen (5C8MEP9CRW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Du Chengwen (9U8CKY9V93)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Du Chengwen (5C8MEP9CRW)";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1447,7 +1968,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevindcw.DStarNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2177d846-ea2e-4967-8c91-f4e5574e5056";
+				PROVISIONING_PROFILE = "aa75ac36-971d-4e5e-a76b-225a52898066";
 				PROVISIONING_PROFILE_SPECIFIER = XiaoXiong;
 			};
 			name = Release;

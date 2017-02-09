@@ -29,6 +29,11 @@
     self.view.backgroundColor=[UIColor whiteColor];
   
    [self sendWebView];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
+    
+}
+-(void)didClickedBack:(UIBarButtonItem *)item{
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 -(void)sendWebView

@@ -22,6 +22,11 @@
     self.ImgView.clipsToBounds = YES;
     self.ImgView.layer.cornerRadius = 5;
     
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
+    
+}
+-(void)didClickedBack:(UIBarButtonItem *)item{
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 -(void)viewWillAppear:(BOOL)animated{

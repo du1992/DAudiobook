@@ -18,6 +18,8 @@
         _imgView=[[UIImageView alloc]initWithFrame:CGRectMake(4, 0, CGRectGetWidth(frame)-9, CGRectGetHeight(frame))];
         [self addSubview:_imgView];
         
+        _imgView.layer.cornerRadius=8.0;
+        _imgView.layer.masksToBounds=YES;
         _imgView.contentMode=UIViewContentModeScaleAspectFit;
         
         _label=[[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_imgView.frame)-30, CGRectGetWidth(frame),30)];

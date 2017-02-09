@@ -44,7 +44,13 @@
     _headerView.imgView.contentMode=UIViewContentModeScaleToFill;
     [self.headerView.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"StarSelf"]];
     [self.headerView.backGroundImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"StarSelf"]];
+    
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
+    
+    
+    
+    
+    
     self.title=self.starName;
     self.tableView.delegate=self;
     self.tableView.dataSource=self;

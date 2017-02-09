@@ -10,6 +10,9 @@
 #import "WallpaperCell.h"
 #import "Macro.h"
 #import "StarRankingViewController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIBarButtonItem+Helper.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface DStarRankingViewController (){
     NSArray*imgarray;
@@ -40,6 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
 //    self.collectionView.backgroundColor=[UIColor whiteColor];
     self.collectionView.backgroundColor = RGB(33, 158, 234);
     
+    [self  setupNavItem];
     //注册cell
     [self.collectionView registerClass:[WallpaperCell class] forCellWithReuseIdentifier:reuseIdentifier];
     imgarray=[NSMutableArray arrayWithObjects:@"内地排名",@"港台排名" ,@"日韩排名",@"欧美排名",nil];
@@ -81,7 +85,25 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
+#pragma mark - 设置导航栏按钮
+- (void)setupNavItem
+{
+    //设置导航栏唤醒抽屉按钮
+    MMDrawerBarButtonItem *leftItem = [MMDrawerBarButtonItem itemWithNormalIcon:@"menu" highlightedIcon:nil target:self action:@selector(leftDrawerButtonPress:)];
+    [leftItem setTintColor:[UIColor blackColor]];
+    
+    //设置紧挨着左侧按钮的标题按钮
+    MMDrawerBarButtonItem *titleItem = [MMDrawerBarButtonItem itemWithTitle:@"排名" target:nil action:nil];
+    [titleItem setTintColor:[UIColor blackColor]];
+    
+    self.navigationItem.leftBarButtonItems = @[leftItem,titleItem];
+}
 
+
+- (void)leftDrawerButtonPress:(MMDrawerBarButtonItem *)item
+{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
 
 
 

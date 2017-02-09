@@ -10,7 +10,7 @@
 #import "DScrollMenuView.h"
 #import "Macro.h"
 
-static const CGFloat kScrollMenuViewHeight = 40;
+static const CGFloat kScrollMenuViewHeight = 35;
 
 @interface DContainerViewController () <UIScrollViewDelegate, DScrollMenuViewDelegate>
 
