@@ -8,12 +8,12 @@
  
  演示 
 -------  
-![小熊2.png](http://upload-images.jianshu.io/upload_images/3323633-f5587a435f829498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![小熊1.png](http://upload-images.jianshu.io/upload_images/3323633-4a146d130e8cea0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![小熊3.png](http://upload-images.jianshu.io/upload_images/3323633-8f5daa58a8c345d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img width="150"  src="http://upload-images.jianshu.io/upload_images/3323633-f5587a435f829498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"/ onclick='小熊资讯("https://itunes.apple.com/cn/app/xiao-xiong-ming-xing-zi-xun/id1182862136?mt=8")' >
+<img width="150"  src="http://upload-images.jianshu.io/upload_images/3323633-4a146d130e8cea0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"/ onclick='小熊资讯("https://itunes.apple.com/cn/app/xiao-xiong-ming-xing-zi-xun/id1182862136?mt=8")' >
+<img width="150"  src="http://upload-images.jianshu.io/upload_images/3323633-8f5daa58a8c345d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"/ onclick='小熊资讯("https://itunes.apple.com/cn/app/xiao-xiong-ming-xing-zi-xun/id1182862136?mt=8")' >
+
 
  
-
  此外 另一个小项目也已经上线了 大家有兴趣可以玩一玩
 ------- 
 <img width="150" height="150" src="http://7xpxoc.com1.z0.glb.clouddn.com/%E7%BC%96%E7%A8%8B%E7%AE%A1%E5%AE%B6%E5%9B%BE%E6%A0%87.png"/ onclick='编程管家("https://itunes.apple.com/cn/app/bian-cheng-guan-jia/id1179656413?mt=8")' ><br>  
