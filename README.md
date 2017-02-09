@@ -8,7 +8,7 @@
  
  演示 
 -------  
-![小熊2.png](http://upload-images.jianshu.io/upload_images/3323633-f5587a435f829498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
+![小熊2.png](http://upload-images.jianshu.io/upload_images/3323633-f5587a435f829498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![小熊1.png](http://upload-images.jianshu.io/upload_images/3323633-4a146d130e8cea0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![小熊3.png](http://upload-images.jianshu.io/upload_images/3323633-8f5daa58a8c345d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
