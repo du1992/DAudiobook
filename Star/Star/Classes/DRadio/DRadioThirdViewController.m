@@ -25,8 +25,19 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.musicView];
+    __weak DRadioThirdViewController *weakSelf = self;
     [self.musicView passRadioMessage:self.dataModel andName:self.uname];
+    self.musicView.playerLoading= ^(BOOL loading){
+        if (loading) {
+            weakSelf.title=@"数据加载中.....";
+        }else {
+            weakSelf.title=@"音乐正在播放";
+        }
+    };
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
+    
+    
+    
     
 }
 -(void)didClickedBack:(UIBarButtonItem *)item{

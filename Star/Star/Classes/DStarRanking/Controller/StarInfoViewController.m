@@ -41,9 +41,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSURL *url=[NSURL URLWithString:_ranking.imgUrl];
-    _headerView.imgView.contentMode=UIViewContentModeScaleToFill;
+    
     [self.headerView.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"StarSelf"]];
     [self.headerView.backGroundImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"StarSelf"]];
+    _headerView.imgView.contentMode=UIViewContentModeScaleAspectFill;
     
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didClickedBack:)];
     

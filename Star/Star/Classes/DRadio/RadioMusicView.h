@@ -26,4 +26,6 @@
 
 - (void)passRadioMessage:(DRadioSecondListModel *)listModel andName:(NSString *)name;
 
+@property (nonatomic, copy)  void (^playerLoading) (BOOL loading);
+
 @end

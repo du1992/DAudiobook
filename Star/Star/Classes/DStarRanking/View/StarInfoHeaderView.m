@@ -31,6 +31,7 @@
     [_backGroundImageView addSubview:effectView];
     [self addSubview:_backGroundImageView];
     [self sendSubviewToBack:_backGroundImageView];
+    
 }
 
 -(void)setSelfInfo:(StarSelfInfo *)selfInfo{

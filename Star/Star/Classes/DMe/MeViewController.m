@@ -50,8 +50,8 @@
     
     imgarray=[[NSArray alloc]init];
     titearray=[[NSArray alloc]init];
-    titearray=[NSMutableArray arrayWithObjects:@"用户协议",@"推荐",@"缓存清理",@"关于",nil];
-    imgarray=[NSMutableArray arrayWithObjects:@"协议",@"推荐" ,@"清理缓存",@"关于",nil];
+    titearray=[NSMutableArray arrayWithObjects:@"用户协议",@"推荐",@"缓存清理",@"关于",@"建议",nil];
+    imgarray=[NSMutableArray arrayWithObjects:@"协议",@"推荐" ,@"清理缓存",@"关于",@"建议",nil];
     [self setupHeaderView];
     
    
@@ -125,6 +125,11 @@
         AboutOurViewController *aboutVC = [[AboutOurViewController alloc] init];
         [self.navigationController pushViewController:aboutVC animated:YES];
         
+    }else{
+        NSString *str = [NSString stringWithFormat:
+                         @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1182862136"];
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
     }
 }
 -(void)initAlert:(NSString*)title mesage:(NSString*)mesage otherA:(NSString*)otherA otherB:(NSString*)otherB{

@@ -14,7 +14,9 @@
 #import "MusicView.h"
 #import "Macro.h"
 
-@interface RadioMusicView ()
+@interface RadioMusicView (){
+    BOOL playerLoadings;
+}
 
 @property (nonatomic,strong) UIImageView *backgroundImageView;
 /**
@@ -44,6 +46,7 @@
 
 @property(nonatomic,strong)DRadioSecondListModel*SecondListModel;
 
+
 @end
 
 @implementation RadioMusicView
@@ -72,9 +75,6 @@
     CGFloat coverW = 100;
     [weakSelf.coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.mas_top).offset(60);
-//        make.left.equalTo(weakSelf.mas_left).offset(60);
-//        make.right.equalTo(weakSelf.mas_right).offset(-padding);
-        
         make.size.mas_equalTo(CGSizeMake(coverW,coverW));
         make.centerX.equalTo(weakSelf.mas_centerX);
     }];
@@ -244,6 +244,7 @@
                                              selector:@selector(playerItemDidReachEnd)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:self.player];
+   
     self.SecondListModel=listModel;
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverimg] placeholderImage:Placholder];
     [self.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverimg] placeholderImage:Placholder];
@@ -275,6 +276,12 @@
         
         
         [self addobserver];
+        double duration =0.6;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+             self.playerLoading(YES);
+        });
+      
+      
     }
 }
 
@@ -290,25 +297,26 @@
         //总的缓冲时间
         NSInteger total = CMTimeGetSeconds(weakSelf.player.currentItem.duration);
         if (current) {
+            [self PlayerItemTimeJumped];
             weakSelf.progressView.progress = current * 1.0 / total;
             if (current > 60) {
                 NSInteger minute = current / 60;
                 NSInteger second = current % 60;
-                weakSelf.currentLabel.text = [NSString stringWithFormat:@"%ld:%02ld",minute, second];
+                weakSelf.currentLabel.text = [NSString stringWithFormat:@"%ld:%02ld",(long)minute, second];
             } else{
-               weakSelf.currentLabel.text = [NSString stringWithFormat:@"00:%02ld",current];
+               weakSelf.currentLabel.text = [NSString stringWithFormat:@"00:%02ld",(long)current];
             }
         }
         self.currentTime = time;
     }];
     self.observer = timeObserver;
-    self.commentBtn.selected = YES;
-    self.coverImageView= [self rotate360DegreeWithImageView:self.coverImageView];
+    
 }
 
 
 - (void)dealloc
 {
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
     if (self.observer) {
         [self.player removeTimeObserver:self.observer];
         self.observer = nil;
@@ -325,7 +333,15 @@
     [self  PlayOrPause];
     NSLog(@"结束======");
 }
-
+-(void)PlayerItemTimeJumped{
+    if (!playerLoadings) {
+        playerLoadings=YES;
+        self.playerLoading(NO);
+        self.commentBtn.selected = YES;
+        self.coverImageView= [self rotate360DegreeWithImageView:self.coverImageView];
+    }
+    
+}
 #pragma mark -旋转动画
 -(UIImageView *)rotate360DegreeWithImageView:(UIImageView *)imageView{
     CABasicAnimation *animation = [ CABasicAnimation
@@ -340,14 +356,6 @@
     //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
     animation.cumulative = YES;
     animation.repeatCount = 1000;
-    
-    //在图片边缘添加一个像素的透明区域，去图片锯齿
-//    CGRect imageRrect = CGRectMake(0, 0,imageView.frame.size.width, imageView.frame.size.height);
-//    UIGraphicsBeginImageContext(imageRrect.size);
-//    [imageView.image drawInRect:CGRectMake(1,1,imageView.frame.size.width-2,imageView.frame.size.height-2)];
-//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-    
     [imageView.layer addAnimation:animation forKey:nil];
     return imageView;
 }
