@@ -12,6 +12,7 @@
 #import "AFNetMonitor.h"
 #import "UMMobClick/MobClick.h"
 #import "Macro.h"
+#import "Business.h"
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -22,6 +23,7 @@
 #import "DHomeViewController.h"
 #import "DNavigationController.h"
 #import "DLaunchingViewController.h"
+#import <UMSocialCore/UMSocialCore.h>
 @interface AppDelegate ()
 @property (nonatomic, strong) DIntroductionViewController *introductionView;
 @end
@@ -37,11 +39,8 @@
     [self.window makeKeyAndVisible];
     
      
-    
-    
-    
-    //引导页
-//    [self  judgePage];
+    //审核判断
+    [self  auditJudgment];
     //网络判断
     [AFNetMonitor sharedClient];
     //使用友盟统计
@@ -52,25 +51,14 @@
     
     return YES;
 }
--(void)judgePage{
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    BOOL hasin = [defaults boolForKey:@"first"];
-    if (!hasin) {
-        [defaults setBool:YES forKey:@"first"];
-        //APP引导页面
-        NSArray *coverImageNames = @[@"one", @"two", @"three"];
-        NSArray *backgroundImageNames = @[@"starBg", @"starBg", @"starBg"];
-        self.introductionView = [[DIntroductionViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
-        [self.window addSubview:self.introductionView.view];
+-(void)auditJudgment{
+    
+    [[Business sharedInstance] getTime:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         
-        __weak AppDelegate *weakSelf = self;
-        self.introductionView.didSelectedEnter = ^() {
-            [weakSelf.introductionView.view removeFromSuperview];
-            weakSelf.introductionView = nil;
-            
-        };
+    } fail:^(NSString *error) {
         
-    }
+    }];
+    
 }
 
 
@@ -79,6 +67,16 @@
     UMConfigInstance.channelId = @"App Store";
     [MobClick startWithConfigure:UMConfigInstance];
     //设置 AppKey 及 LaunchOptions
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXAppkey appSecret:WXAppSecret redirectURL:@"http://mobile.umeng.com/social"];
+    
+    
+    //设置分享到QQ互联的appKey和appSecret
+    // U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQAppkey  appSecret:QQAppSecret redirectURL:@"http://mobile.umeng.com/social"];
+    
+    //设置新浪的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:WBAppkey  appSecret:WBAppSecret redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
 }
 
 -(void)JPushSDK:(NSDictionary *)launchOptions{

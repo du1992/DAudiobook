@@ -20,6 +20,7 @@
  */
 @property (nonatomic,strong) UILabel *currentLabel;
 @property (nonatomic,strong) AVPlayer *player;
+@property (nonatomic,strong) AVAudioPlayer *audioplayer;
 @property (nonatomic,strong) AVPlayerItem *itemPlayer;
 @property (nonatomic,assign,getter=isPlaying) BOOL playing;
 

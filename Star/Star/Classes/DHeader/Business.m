@@ -75,5 +75,25 @@ static Business *sharedObj = nil;
         fail(@"错误");
     }];
 }
+//时间获取
+- (void)getTime:(NetWorkSuccBlock )succ fail:(businessFail )fail{
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    BOOL hasin = [defaults boolForKey:@"time"];
+    if (!hasin) {
+        
+        NSDate *  senddate=[NSDate date];
+        NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+        [dateformatter setDateFormat:@"YYYYMMdd"];
+        NSString *  locationString=[dateformatter stringFromDate:senddate];
+        
+        if ([locationString intValue]>20170222) {
+             [defaults setBool:YES forKey:@"time"];
+            NSLog(@"locationString:%@",locationString);
+        }
+        
+    }
+    
+}
 @end
 

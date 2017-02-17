@@ -96,7 +96,6 @@
     
     [weakSelf.commentBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.likeBtn.mas_top);
-//        make.right.equalTo(weakSelf.coverImageView.mas_right);
         make.centerX.equalTo(weakSelf.mas_centerX);
         make.size.mas_equalTo(CGSizeMake(60,60));
     }];
@@ -157,10 +156,10 @@
 {
     [self addSubview:self.coverImageView];
     [self addSubview:self.likeBtn];
-    [self addSubview:self.commentBtn];
     [self addSubview:self.titleLabel];
-    [self addSubview:self.progressView];
     [self addSubview:self.currentLabel];
+    [self addSubview:self.progressView];
+    [self addSubview:self.commentBtn];
 }
 
 
@@ -237,17 +236,71 @@
 
 - (void)passRadioMessage:(DRadioSecondListModel *)listModel andName:(NSString *)name
 {
-    if (self.musicView.isPlaying) {
-        [self.musicView pause];
+    [self playUI:listModel andName:name];
+    
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    BOOL hasin = [defaults boolForKey:@"time"];
+    if (!hasin) {
+        self.progressView.hidden=YES;
+        self.commentBtn.hidden=YES;
+        self.audioplayer = [[MusicManager defaultManager] playingMusic:[NSString stringWithFormat:@"%d",arc4random() % 9]];
+        
+    }else{
+        
+        if (self.musicView.isPlaying) {
+            [self.musicView pause];
+        }
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playerItemDidReachEnd)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:self.player];
+        
+        
+        self.playing = YES;
+        if (listModel.musicUrl != self.currentURL) {
+            self.player = nil;
+            self.player = [[MusicManager defaultManager] playingURLMusic:listModel.musicUrl];
+            
+            
+            
+            
+            [self.player play];
+            self.currentURL = listModel.musicUrl;
+            self.playing = YES;
+            
+            //添加通知
+            NSDictionary *info = @{
+                                   @"model" : listModel,
+                                   @"uname" : name,
+                                   @"player" : self.player
+                                   };
+            [[NSNotificationCenter defaultCenter] postNotificationName:MHDidPlayMusicNotification object:nil userInfo:info];
+            
+            
+            [self addobserver];
+            double duration =0.6;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.playerLoading(YES);
+            });
+            
+            
+        }
     }
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playerItemDidReachEnd)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:self.player];
+    
+    
+    
    
+    
+    
+}
+
+-(void)playUI:(DRadioSecondListModel *)listModel andName:(NSString *)name{
+    
     self.SecondListModel=listModel;
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverimg] placeholderImage:Placholder];
     [self.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverimg] placeholderImage:Placholder];
+    
     
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
@@ -257,33 +310,8 @@
     
     
     self.titleLabel.text = listModel.title;
-    self.playing = YES;
-    
-    if (listModel.musicUrl != self.currentURL) {
-        self.player = nil;
-        self.player = [[MusicManager defaultManager] playingURLMusic:listModel.musicUrl];
-        [self.player play];
-        self.currentURL = listModel.musicUrl;
-        self.playing = YES;
-        
-        //添加通知
-        NSDictionary *info = @{
-                               @"model" : listModel,
-                               @"uname" : name,
-                               @"player" : self.player
-                               };
-        [[NSNotificationCenter defaultCenter] postNotificationName:MHDidPlayMusicNotification object:nil userInfo:info];
-        
-        
-        [self addobserver];
-        double duration =0.6;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-             self.playerLoading(YES);
-        });
-      
-      
-    }
 }
+
 
 
 - (void)addobserver

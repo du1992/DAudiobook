@@ -70,7 +70,13 @@ typedef void (^NetWorkErrorBlock)(AFHTTPRequestOperation* completedOperation, NS
  *  @param fail   失败回调
  */
 - (void)getRadioSecond:(NSString*)url params:(NSDictionary*)params succ:(NetWorkSuccBlock )succ fail:(businessFail )fail;
+/**
+ 
+ *  时间获取（为了审核）
+ *  @param succ   成功回调
+ *  @param fail   失败回调
 
-
+ */
+- (void)getTime:(NetWorkSuccBlock )succ fail:(businessFail )fail;
 
 @end

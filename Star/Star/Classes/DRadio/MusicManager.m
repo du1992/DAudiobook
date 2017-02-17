@@ -78,12 +78,12 @@ static AVPlayer *player = nil;
     if (!player) {
         
 //        //先取出，进行判断
-//        if ([self checkout:songid])
-//        {
-//            return nil;
-//        }
+        if ([self checkout:songid])
+        {
+            return nil;
+        }
         
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:songid ofType:@"mp3"]];
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:songid ofType:@".m4r"]];
         
         if (!url)  return nil;
         

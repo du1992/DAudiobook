@@ -132,13 +132,15 @@
     if (!self.headerViewBlock) {
         return;
     }
-    if (tap.view.tag == 10001) {
-        self.headerViewBlock(@"我的二维码");
-    } else if (tap.view.tag == 10005) {
-        self.headerViewBlock(@"编辑签名");
-    } else {
-        self.headerViewBlock(@"个人信息");
-    }
+    self.headerViewBlock(@"");
+//    if (tap.view.tag == 10001) {
+//        self.headerViewBlock(@"我的二维码");
+//    }
+//    else if (tap.view.tag == 10005) {
+//        self.headerViewBlock(@"编辑签名");
+//    } else {
+//        self.headerViewBlock(@"个人信息");
+//    }
 }
 
 - (NSTimer *)timer {

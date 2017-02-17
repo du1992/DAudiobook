@@ -15,6 +15,10 @@
 #import "DRadioThirdViewController.h"
 #import "DNavigationController.h"
 #import "DAppStore.h"
+#import <UShareUI/UShareUI.h>
+#import "DShareView.h"
+
+
 @interface DLeftMenuViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 /**
@@ -28,7 +32,9 @@
  */
 @property (nonatomic,strong) NSArray *cellImages;
 @property (nonatomic,strong) DHeadView *headView;
+@property (nonatomic,strong) DShareView *shareView;
 @property (nonatomic,strong) DPlayMusicView *playMusicView;
+
 
 
 @end
@@ -83,7 +89,24 @@
     //设置头部视图
     DHeadView *headerView = [[DHeadView alloc] init];
     [headerView setBackgroundColor:RGB(255, 255, 255)];
-    
+    __weak DLeftMenuViewController *weakSelf = self;
+    headerView.headerViewBlock=^(NSString *titleStr){
+        
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        BOOL hasin = [defaults boolForKey:@"time"];
+        if (hasin) {
+            DShareView *shareView = [[DShareView alloc] init];
+            [shareView showInView:weakSelf.view ];
+            
+            UITapGestureRecognizer *tapThree = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
+            [shareView.bgControll addGestureRecognizer:tapThree];
+            weakSelf.shareView=shareView;
+            for (int i=0; i<shareView.buttonArray.count; i++) {
+                [shareView.buttonArray[i] addTarget:self action:@selector(shareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            
+        }
+};
 
     
     [self.view addSubview:headerView];
@@ -106,6 +129,59 @@
     [self setupConstrain];
 }
 
+- (void)tapEvent {
+    self.shareView.bgControll.hidden = YES;
+    [self.shareView.bgControll removeFromSuperview];
+}
+-(void)shareButtonAction:(UIButton *)button{
+    
+    switch (button.tag) {
+        case 0:
+            [self  shareWebPageToPlatformType:UMSocialPlatformType_WechatSession];
+            
+            break;
+        case 1:
+            [self  shareWebPageToPlatformType:UMSocialPlatformType_Sina];
+            
+            break;
+            
+        case 2:
+            [self  shareWebPageToPlatformType:UMSocialPlatformType_QQ];
+            
+            break;
+        case 3:
+           [self  shareWebPageToPlatformType:UMSocialPlatformType_WechatTimeLine];
+            break;
+            
+        case 4:
+            
+            break;
+    }
+
+    
+    
+    
+
+}
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    //创建网页内容对象
+    UIImage* thumbURL =  [UIImage imageNamed:@"小熊明星资讯"];
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"小熊资讯" descr:@"有趣的视频，好听的音乐都在这里。【希望你在孤独的时候，用我的应用可以开心点】" thumImage:thumbURL];
+    //设置网页地址
+    shareObject.webpageUrl = @"https://itunes.apple.com/cn/app/%E5%B0%8F%E7%86%8A%E8%B5%84%E8%AE%AF-%E9%99%AA%E4%BC%B4%E4%BD%A0%E7%9A%84%E5%96%9C%E6%80%92%E5%93%80%E4%B9%90/id1182862136?mt=8";
+    
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+    }];
+    [self  tapEvent];
+}
 
 #pragma mark -
 #pragma mark - 数据源方法
@@ -198,15 +274,16 @@
     }else{
         //用户好评系统
         DAppStore *toAppStore = [[DAppStore alloc]init];
-        toAppStore.myAppID = @"1182862136";
+        toAppStore.myAppID = StoreAppID;
         [toAppStore showGotoAppStore:self];
     }
     
     
 }
+
 - (void)viewWillDisappear:(BOOL)animated {
     [self.headView.timer invalidate];
     self.headView.timer = nil;
-    NSLog(@"%@",@"定时器销毁");
+   
 }
 @end

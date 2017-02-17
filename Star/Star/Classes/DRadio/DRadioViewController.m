@@ -44,17 +44,18 @@
     
     
     //电台网络请求
-//   [[Business sharedInstance] getRadio:radioUrl succ:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-//       NSDictionary *dataDic = responseObject[@"data"];
-//       //设置表格的数据
-//       self.radioAllListArray = [DRadioAllList mj_objectArrayWithKeyValuesArray:dataDic[@"alllist"]];
-//       [self.radioTableView reloadData];
-//      
-//    
-//   } fail:^(NSString *error) {
-//      
-//     
-//   }];
+   [[Business sharedInstance] getRadio:radioUrl succ:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+       NSDictionary *dataDic = responseObject[@"data"];
+       if (dataDic) {
+           //设置表格的数据
+           self.radioAllListArray = [DRadioAllList mj_objectArrayWithKeyValuesArray:dataDic[@"alllist"]];
+           [self.radioTableView reloadData];
+       }
+       
+    } fail:^(NSString *error) {
+      
+     
+   }];
 }
 
 #pragma mark - 表格数据源方法

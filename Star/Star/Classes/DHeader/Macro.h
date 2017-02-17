@@ -104,9 +104,20 @@
 
 //友盟
 #define UmengAppkey @"584503b645297d6e0e0004c6"
+#define WXAppkey    @"wx53ed0e60138aa498"
+#define QQAppkey    @"1105893514"
+#define WBAppkey    @"3733899087"
+#define WXAppSecret @"f86c46b2a02872e740bba901f3ef3a92"
+#define QQAppSecret @"OnXqfRncSSAEmnIK"
+#define WBAppSecret @"f6b748e2857904dcaa15bd17266a4180"
+
 //极光
 #define JPAppkey  @"3a251660858ce26b82cc6866"
 #define JPchannel @""
+
+//商店
+#define StoreAppID @"1182862136"
+
 
 
 
