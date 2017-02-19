@@ -36,7 +36,7 @@
                     <color key="textColor" red="0.39894551038742065" green="0.26284801959991455" blue="0.21084195375442505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.2.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exg-FW-EvM">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.2.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exg-FW-EvM">
                     <rect key="frame" x="138.5" y="219" width="98" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="98" id="GYr-hA-j1S"/>
@@ -221,6 +221,6 @@
         </view>
     </objects>
     <resources>
-        <image name="小熊明星资讯" width="260" height="260"/>
+        <image name="小熊明星资讯" width="130" height="130"/>
     </resources>
 </document>
