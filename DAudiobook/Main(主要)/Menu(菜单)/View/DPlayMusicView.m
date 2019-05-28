@@ -18,8 +18,10 @@
 
 - (void)setLayout{
     
-    //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getMusicModel:) name:MHDidPlayMusicNotification object:nil];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(GoToRadio)];
+    self.backgroundColor=ImportantColor;
+    
+   
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(detailsClick)];
     [self addGestureRecognizer:tap];
     
     
@@ -65,11 +67,7 @@
     manager.isStartPlayer = ^(NSInteger index) {//0是开始 1 暂停
         if (index==0) {//开启定时器
             [self startTimer];
-            //存储歌曲总时间
-            //            long long int totalTime = [LZPlayerManager lzPlayerManager].player.currentItem.duration.value / [LZPlayerManager lzPlayerManager].player.currentItem.duration.timescale;
-            //            NSString *str = [NSString stringWithFormat:@"%lld",totalTime];
-            //            LZUserDefaultsSET(str, TOTALTIME);
-            //            LZUserDefaultsSynchronize;
+          
         }else if(index==1){
             [self stopTimer];
         }else{}
@@ -79,78 +77,13 @@
 }
 
 
-//- (void)GoToRadio
-//{
-//    if (!self.listModel) {
-//        return;
-//    }
-//
-//    if (self.block) {
-//        self.block(self.listModel);
-//    }
-//
-//
-//}
-
-
-#pragma mark - 移除通知
-- (void)dealloc
+- (void)detailsClick
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.SQPlayBtn removeObserver:self forKeyPath:@"selected"];
-}
-
-#pragma mark - 其他方法
-- (void)PlayOrPause
-{
-    self.playButton.selected = ![self.playButton isSelected];
-//    self.SQPlayBtn.selected = self.playBtn.selected;
-    if (self.playButton.selected) {
-        [self playMusic];
-        [self  resumeLayer:self.musicIconImageView.layer];
-    }else
-    {
-        
-//        [[MusicManager defaultManager] pauseMusic:self.songModel.track_url];
-//        [self.player pause];
-//        self.currTime = self.player.currentTime;
-//        [self  pauseLayer:self.MusicIconImageView.layer];
+   if (self.bottomMusicBlock) {
+        self.bottomMusicBlock();
     }
+    
 }
-
-
-- (void)playMusic
-{
-//    MusicManager *manager = [MusicManager defaultManager];
-//    if (self.songModel) {
-//        [manager playingMusic:self.songModel.track_url];
-//        self.listModel = nil;
-//    }else{
-//        [self.player seekToTime:self.currTime];
-//        [self.player play];
-//        self.songModel = nil;
-//    }
-}
-
-
-//- (void)getMusicModel:(NSNotification *)notification
-//{
-//    self.MusicIconImageView= [self rotate360DegreeWithImageView:self.MusicIconImageView];
-//    NSDictionary *info = notification.userInfo;
-//    id obj = info[@"model"];
-//    self.listModel = obj;
-//    //        [self.MusicIconImageView sd_setImageWithURL:[NSURL URLWithString:self.listModel.coverimg] placeholderImage:Placholder];
-//    self.singerLabel.text = info[@"uname"];
-//    self.songNamelabel.text = self.listModel.title;
-//    self.player = info[@"player"];
-//    self.isDownload = [info[@"isDownload"] integerValue];
-//    //KVO
-//    [self.SQPlayBtn addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
-//
-//    self.playBtn.selected = YES;
-//}
-
-
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
@@ -208,8 +141,6 @@
         _playButton = [[UIButton alloc] init];
         [_playButton setImage:[UIImage imageNamed:@"播放"] forState:UIControlStateNormal];
         [_playButton setImage:[UIImage imageNamed:@"暂停"] forState:UIControlStateSelected];
-        //    btn.selected = NO;
-        //    [btn addTarget:self action:@selector(PlayOrPause) forControlEvents:UIControlEventTouchUpInside];
         [_playButton addTarget:self action:@selector(playAndPauseBtnClicekd:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_playButton];
         
@@ -309,11 +240,9 @@
     // 获得音乐总时长
     long long int totalTime = [DPlayerManager defaultManager].player.currentItem.duration.value / [DPlayerManager defaultManager].player.currentItem.duration.timescale;
     NSString *str = [NSString stringWithFormat:@"%lld",totalTime];
-    if (![DPlayerManager defaultManager].totalTime) {
-        [DPlayerManager defaultManager].totalTime=str;
-        //存储歌曲总时间
-         DUserDefaultsSET(str, TOTALTIME);
-    }
+    [DPlayerManager defaultManager].totalTime=str;
+       
+
     
     
     self.progressSlider.maximumValue = totalTime;

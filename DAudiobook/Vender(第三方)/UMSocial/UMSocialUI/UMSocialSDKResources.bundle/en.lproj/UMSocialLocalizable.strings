@@ -1,0 +1,546 @@
+/* 
+  Localizable.strings
+  SocialSDK
+
+  Created by yeahugo on 13-6-17.
+  Copyright (c) 2013年 Umeng. All rights reserved.
+*/
+"button_cancel" = "Cancel";
+"button_ok" = "OK";
+"button_start" = "Start";
+
+"button_close" = "Close";
+"button_back" = "Back";
+"button_refresh" = "Refresh";
+
+"label_request_account" = "Getting account data, please wait……";
+
+"oauth_title" = "Authorization";
+"oauth_text" = "Connecting to authorization web, please wait……";
+"oauth_follow" = "Follow official micro-blog";
+"mask_text" = "please wait……";
+
+"oauth_error_title" = "authorise failed";
+"oauth_error_message" = "authorise failed, you can try again later";
+"oauth_error_not_approved" = "authorise failed, for your app haven't approved or you haven't add your weibo uid to test accounts";
+
+"shareQQ_error" = "Error";
+"shareQQ_notInstall" = "Mobile QQ havn't be installed in your device";
+"shareQQ_openFail" = "Open Mobile QQ fail";
+"shareQQ_ShareFail" = "Share To QQ fail";
+"shareInstagram_openFail" = "Open Instagram fail";
+"shareClient_notInstall" = "Client not installed in your device";
+
+"custom_share_title" = "UMeng share";
+
+"shareList_title" = "Share To";
+"shareEdit_title" = "Share To ";
+"shareEdit_post" = "Post";
+"shareEdit_change_account" = "Change Account";
+"shareEdit_post_finish" = "Post Finished";
+"shareEdit_post_fail" = "Post Failed";
+"shareEdit_posting" = "Posting";
+"shareEdit_delete_picture" = "Delete Picture";
+"shareEdit_delete_video" = "Delete Video";
+"shareEdit_delete_music" = "Delete Music";
+"shareEdit_error_not_empty" = "Post content can not be empty";
+"shareEdit_error_too_long" = "Post content's length too long";
+"shareEdit_error_auth_expired" = "Post failed, for authorization expired";
+"shareEdit_error_auth_again" = "authorize again";
+"shareEdit_error_text_repeated" = "Text repeated";
+"shareEdit_error_user_baned" = "Sorry, you have been banned";
+"shareEdit_error_fail" = "Share fail";
+"shareEdit_error_no_auth" = "Share fail, for no upload picture authority";
+"shareEdit_error_empty_content" = "Share fail, for the content is empty";
+"shareEdit_addFollow" = "Follow weibo";
+"shareEdit_C" = "符";
+"shareEdit_used" = "常";
+
+"shareShake_button" = "Share";
+
+"share_wechat" = "Share to Wechat";
+"share_wechat_friend" = "Share to Wechat Friend";
+"share_wechat_moments" = "Share to Wechat Moments";
+"share_wechat_no_title" = "No Wechat";
+"share_wechat_no_message" = "Wechat haven't been install in your device";
+"share_facebook_not_login" = "No login Account";
+"share_facebook_not_login_message" = "Your account haven't login";
+"share_facebook_no_osSupport" = "iOS doesn't support";
+"share_facebook_no_osSupport_message" = "The version of your iOS device doesn't support share the that media";
+
+"share_alipay" = "Share to AlipayShare";
+"share_alipay_friend" = "Share to AlipayShare friends";
+"share_alipay_moments" = "Share to AlipayShare Timeline";
+"share_alipay_no_title" = "No Alipay";
+"share_alipay_no_message" = "Alipay not installed in device";
+"share_alipay_version_not_supported" = "The version of Alipay not supported.";
+
+"share_sms_no_osSupport" = "No SMS";
+"share_sms_no_osSupport_message" = "The device doesn't support SMS";
+
+"share_email_no_osSupport" = "No email";
+"share_email_no_osSupport_message" = "Your email service have been turned off, please turn it on before you share your email";
+
+"login_title" = "Login";
+"login_as_tourists" = "Login as tourists";
+"login_choose" = "choose your available account";
+
+"commentList_title" = "Comment List";
+"commentList_mask_text" = "Requesting comments, please wait……";
+"commentList_comment_here" = "Comment here";
+
+"commentDetail_title" = "Detail";
+
+"commentEdit_no_location" = "No Location";
+"commentEdit_post_fail" = "Post comment fail";
+"commentEdit_post_success" = "Post comment success";
+"commentEdit_noLocation_title" = "Location service have been turned off";
+"commentEdit_noLocation_message" = "Your device's location service have been turned off, please turn on it before you share your location";
+"commentEdit_title" = "New Comment";
+"commentEdit_wait" = "Please wait";
+
+"ego_pull_down" = "Pull down, refresh";
+"ego_refresh" = "Loose to refresh";
+"ego_load_more" = "Loose to load more";
+"ego_pull_up" = "Pull up, load more";
+"ego_refreshing" = "Refreshing";
+"ego_loading_more" = "Loading more";
+
+"loading" = "Loading";
+
+"shareEdit_error_network_fail_message" = "Network Error";
+
+"network_fail_title" = "Network Error";
+"network_fail_message" = "The network state of your device is not available.";
+
+"account_title" = "User Center";
+"account_title_authorize_status" = "authorize status";
+"account_label_login_tourist" = "login as tourist";
+"account_label_login_account" = "login account";
+"account_lable_not_auth" = "not authorized";
+"account_lable_have_auth" = "authorized";
+"account_title_sns_config" = "sns accounts";
+
+//分享面板
+"umsocial_sina" = "Sina";
+
+"umsocial_wechat" = "Wechat";
+"umsocial_wechat_session" = "Wechat";
+"umsocial_wechat_timeline" = "Moments";
+"umsocial_wechat_favorite" = "Wechat Favorite";
+
+"umsocial_qq" = "QQ";
+"umsocial_qzone" = "Qzone";
+"umsocial_tencentWB" = "tencentWB";
+
+"umsocial_alipay" = "alipay";
+"umsocial_alipay_session" = "Alipay";
+"umsocial_aliay_circle" = "LifeCircle";
+
+"umsocial_lw_session" = "LaiWang";
+"umsocial_lw_timeline" = "LW News";
+
+"umsocial_yixin_session" = "YiXin";
+"umsocial_yixin_timeline" = "YX Moments";
+
+"umsocial_douban" = "Douban";
+
+"umsocial_renren" = "Renren";
+
+"umsocial_email" = "Email";
+"umsocial_sms" = "SMS";
+
+"umsocial_facebook" = "Facebook";
+"umsocial_twitter" = "Twitter";
+"umsocial_instagram" = "Instagram";
+"umsocial_line" = "Line";
+"umsocial_flickr" = "Flickr";
+"umsocial_kakaoTalk" = "KakaoTalk";
+"umsocial_pinterest" = "Pinterest";
+"umsocial_tumblr" = "Tumblr";
+"umsocial_linkedin" = "Linkedin";
+"umsocial_whatsapp" = "Whatsapp";
+
+"umsocial_youdaonote" = "ydnote";
+"umsocial_evernote" = "evernote";
+"umsocial_googleplus" = "Google+";
+"umsocial_pocket" = "Pocket";
+"umsocial_dropbox" = "Dropbox";
+"umsocial_vkontakte" = "VKontakte";
+"umsocial_facebookmessenger" = "Messenger";
+
+"umsocial_default" = "template";
+
+//云端分享认证的国际化字符串
+"cloudShare_share_success" = "share success";
+"cloudShare_share_failed" = "share failed";
+
+"cloudShare_share_close" = "close";
+"cloudShare_share_send" = "send";
+"cloudShare_share" = "share";
+
+"cloudShare_oauth_title" = "oauth";
+"cloudShare_oauth_error" = "oauth error";
+
+
+
+
+//general
+"register" = "Register";
+"login" = "Login";
+"logout" = "Logout";
+"password" = "Password";
+"username" = "Username";
+"confirmpassword"="Confirm password";
+
+"sure" = "OK";
+"yes" = "YES";
+"cancel" = "Cancel";
+"no" = "NO";
+
+"search" = "Search";
+"searching" = "Searching";
+"error" = "Error";
+"delete" = "Delete";
+"copy" = "Copy";
+"transpond" = "Transpond";
+"save" = "Save";
+"prompt" = "Prompt";
+"add" = "Add";
+"send" = "Send";
+"open" = "Open";
+"down" = "Down";
+"choose" = "Choose";
+"accept" = "Accept";
+"reject" = "Reject";
+"wait" = "Please wait...";
+
+"sendingApply" = "sending apply...";
+"acceptFail" = "accept failure";
+"rejectFail" = "reject failure";
+"transponding" = "transponding...";
+"transpondFail" = "transpond Fail";
+"refreshData" = "Refresh data...";
+"loadData" = "Load data...";
+"loadDataFailed" = "Load more failed";
+"saySomething" = "Say somthing";
+"searchResults" = "The search results";
+"doneWithCount" = "Done(%i)";
+"sureToDelete" = "please make sure to delete";
+"receiveCmd" = "receive cmd message";
+"receiveMessage" = "you have a new message";
+"loginAtOtherDevice" = "your login account has been logged in other places";
+"loginUserRemoveFromServer" = "your account has been removed from the server side";
+"deleteFailed" = "Delete failed:%@";
+"notFound" = "Can't found";
+"noMore" = "No more data";
+"hasRead" = "Read";
+"servingIsBanned" = "User is forbidden";
+
+//app
+"AppName" = "EaseMobDemo";
+
+//error des
+"error.connectServerFail" = "Connect to the server failed!";
+"error.connectServerTimeout" = "Connect to the server timed out!";
+"error.connectNetworkFail" = "No network connection!";
+"error.notFound" = "File path not exist";
+"error.initPlayerFail" = "Failed to initialize AVAudioPlayer!";
+"error.palyFail" = "Play failure!";
+"error.initRecorderFail" = "Failed to initialize AVAudioRecorder";
+"error.initRecorderFail" = "File format conversion failed";
+"error.recordStoping" = "Record voice is not over yet";
+"error.recordNotBegin" = "Recording has not yet begun";
+"error.recordTooShort" = "Recording time is too short";
+
+//login
+"login.beginAutoLogin" = "Start automatic login...";
+"login.endAutoLogin" = "End automatic login...";
+"login.errorAutoLogin" = "Automatic logon failure.";
+"login.nameNotSupportZh" = "Name does not support Chinese";
+"login.ongoing" = "Is Login...";
+"login.fail" = "Logon failure";
+"login.inputNameAndPswd" = "Please enter username and password";
+"login.inputApnsNickname" = "Please enter nickname for apns";
+
+//register
+"register.ongoing" = "Is to register...";
+"register.fail" = "Registration failed";
+"register.success" = "Registered successfully, please log in";
+"register.repeat" = "You registered user already exists!";
+"register.confirmPassword" = "The two input password does not match, please input again";
+
+//apns
+"apns.failToRegisterApns" = "Fail to register apns";
+"apns.failToBindDeviceToken" = "Fail to bind device token";
+"apns.content" = "Apns content";
+
+//friend
+"friend.add" = "add friend";
+"friend.somebodyAddWithName" = "%@ add you as a friend";
+"friend.beRefusedToAdd" = "you are shameless refused by '%@'";
+"friend.inputNameToSearch" = "input to find friends";
+"friend.repeat" = "'%@'has been your friend!";
+"friend.repeatApply" = "you have send fridend request to '%@'!";
+"friend.notAddSelf" = "can't add yourself as a friend";
+"friend.repeatInvite" = "%@ have sent the application to you";
+"friend.somebodyInvite" = "%@ invite you as a friend";
+"friend.sendApply" = "sending application...";
+"friend.sendApplyFail" = "send application fails, please operate again";
+"friend.sendApplySuccess" = "send successfully";
+"friend.black" = "Black List";
+"friend.notChatSelf" = "can't talk to yourself";
+"friend.notDeleteSelf" = "can't delete self";
+"friend.block" = "Move to blacklist";
+
+//group
+"group.somebodyInvite" = "%@ invite you to join group \'%@\'";
+"group.applyJoin" = "%@ apply to join groups\'%@\'";
+"group.applyJoinWithName" = "%@ apply to join groups\'%@\'：%@";
+"group.sendApplyFail" = "send application failure:%@\nreason：%@";
+"group.beRefusedToJoin" = "be refused to join the group\'%@\'";
+"group.beKicked" = "you have been kicked out from the group of \'%@\'";
+"group.agreedAndJoined" = "agreed and joined the group of \'%@\'";
+"group.join" = "join the group";
+"group.joined" = "joined";
+"group.owner" = "Owner";
+"group.describe" = "Describe";
+"group.join.ongoing" = "join the group...";
+"group.join.fail" = "again failed to join the group, please";
+"group.sendingApply" = "send group of application...";
+"group.sendApplyRepeat" = "application has been sent";
+"group.atMe" = "[Somebody @ me]";
+"group.atAll" = "[Everyone's message]";
+"group.atPushTitle" = " @ me in the group";
+
+//Create Group
+"group.create.addOccupant" = "add members";
+"group.create.inputName" = "please enter the group name";
+"group.create.inputDescribe" = "please enter a group description";
+"group.create.groupPermission" = "group permission";
+"group.create.private" = "private group";
+"group.create.occupantPermissions" = "members invite permissions";
+"group.create.allowedOccupantInvite" = "allows group members to invite others";
+"group.create.unallowedOccupantInvite" = "don't allow group members to invite others";
+"group.create.ongoing" = "create a group...";
+"group.create.success" = "create group success";
+"group.create.fail" = "Failed to create a group, please operate again";
+"group.create.public" = "public group";
+"group.create.occupantJoinPermissions" = "members join permissions";
+"group.create.open" = "freely join";
+"group.create.needApply" = "you need administrator agreed to join the group";
+"group.create.group" = "Create a group";
+"group.create.join" = "Join public group";
+"group.maxUserCount" = "Group members more than the upper limit";
+
+//Group Bans
+"group.ban.removing" = "members are removing from the blacklist...";
+"group.ban.adding" = "Adding to black list...";
+"group.ban.fetching" = "getting group blacklist...";
+"group.ban.fetchFail" = "fail to get blacklist: %@";
+
+//Group Detail
+"group.removeAllMessages" = "clear all messages";
+"group.destroy" = "dismiss group";
+"group.leave" = "quit the group";
+"group.id" = "groupID";
+"group.occupantCount" = "members count";
+"group.addingOccupant" = "add a group member...";
+"group.fetchInfoFail" = "failed to get the group details, please try again later";
+"group.removingOccupant" = "deleting member...";
+"group.destroyFail" = "dessolve group failed";
+"group.leaveFail" = "exit the group failure";
+"group.addOccupantFail" = "Failed to add group member, please try again later";
+
+//Group Setting
+"group.setting.receiveAndPrompt" = "recv and notification group messages";
+"group.setting.receiveAndUnprompt" = "receive message without apns";
+"group.setting.blockMessage" = "block message";
+"group.setting.save" = "set properties";
+"group.setting.success" = "set success";
+"group.setting.fail" = "set failure";
+"group.setting.subject" = "Please input group name";
+
+//Chatroom detail
+"chatroom.somebodyInvite" = "%@ invite you to join chatroom \'%@\'";
+"chatroom.id" = "chatroomId";
+"chatroom.occupantCount" = "members count";
+"chatroom.description" = "description";
+"chatroom.joining" = "Joining...";
+"chatroom.fetchInfoFail" = "Failed to get the chatroom details";
+"chatroom.joinFailed" = "join chatroom \'%@\' failed";
+"chatroom.join" = "\'%@\'join chatroom\'%@\'";
+"chatroom.leave" = "\'%@\'leave chatroom\'%@\'";
+"chatroom.remove" = "be removed from chatroom\'%@\'";
+
+//call
+"call.initFailed"="Establish call failure";
+"call.waiting"="Waiting to answer...";
+"call.connecting"="Connecting...";
+"call.silence"="Silence";
+"call.speaker"="Speaker";
+"call.reject"="Reject";
+"call.answer"="Answer";
+"call.hangup"="Hangup";
+"call.finished"="Establish call finished";
+"call.autoHangup"="No response and Hang up";
+"call.noResponse"="NO response";
+"call.connectFailed"="Connect failed";
+"call.connectUnsupported"="Unsupported";
+"call.failed"="Call failed";
+"call.offline"="Remote offline";
+"call.suspended"="Call has been suspended";
+"call.over"="Call end";
+"call.cancel"="Cancel the call";
+"call.rejected"="Reject the call";
+"call.in"="In the call...";
+"call.speak"="Can speak...";
+"call.speak.relay"="Can speak...Relay";
+"call.speak.direct"="Can speak...Direct";
+"call.init"="Is init the call...";
+"call.dealloc"="Is hanging up the call...";
+"call.videoSize"="Width/Height: ";
+"call.videoTimedelay"="Timedelay: ";
+"call.videoFramerate"="Framerate: ";
+"call.videoLostcnt"="Lostcnt: ";
+"call.videoLocalBitrate"="Local Bitrate: ";
+"call.videoRemoteBitrate"="Remote Bitrate: ";
+"call.switchCamera"="Switch Camera";
+
+//message
+"message.image" = "image";
+"message.location" = "location";
+"message.voice" = "audio";
+"message.video" = "video";
+"message.image1" = "[image]";
+"message.location1" = "[location]";
+"message.voice1" = "[audio]";
+"message.video1" = "[video]";
+"message.beginReceiveOffine" = "begin to receive offline messages";
+"message.endReceiveOffine" = "end to receive offline messages";
+"message.toolBar.inputPlaceHolder" = "input a new message";
+"message.toolBar.record.upCancel" = "slide up to cancel sending";
+"message.toolBar.record.loosenCancel" = "release the fingers, to cancel sending";
+"message.toolBar.record.touch" = "hold down to talk";
+"message.toolBar.record.send" = "loosen to send";
+"DXMessageToolBarDelegate.record" = "hold down to talk";
+"DXMessageToolBarDelegate.send" = "loosen to send";
+
+"message.downloadingAudio" = "downloading voice, click later";
+"message.downloadingVideo" = "downloading video...";
+"message.videoFail" = "video for failure!";
+"message.downloadingImage" = "downloading a image...";
+"message.imageFail" = "image for failure!";
+"message.thumImageFail" = "thumbnail for failure!";
+"message.simulatorNotSupportCamera" = "simulator does not support taking picture";
+"message.simulatorNotSupportVideo" = "simulator does not support video";
+"message.startRecordFail" = "failure to start recording";
+"message.noMessage" = "All messages cleared";
+"message.forbiddenWords" = "Your message contains forbidden words";
+
+//media
+"media.timeShort" = "The recording time is too short";
+
+//network
+"network.disconnection" = "Network disconnection";
+
+//reconnection
+"reconnection.retry" = "Fail to log in your account, is try again... \nclick 'logout' button to jump to the login page \nclick 'continue to wait for' button for reconnection successful";
+"reconnection.ongoing" = "reconnecting...";
+"reconnection.fail" = "reconnection failure, later will continue to reconnection";
+"reconnection.success" = "reconnection successful！";
+"reconnection.wait" = "continue to wait";
+
+//location
+"location.messageType" = "location message";
+"location.fail" = "locate failure";
+"location.ongoning" = "locating...";
+
+//title
+"title.conversation" = "Conversations";
+"title.addressbook" = "AddressBook";
+"title.setting" = "Setting";
+"title.group" = "Group";
+"title.chatroom" = "Chatroom";
+"title.mychatroom" = "My Chatroom";
+"title.chooseContact" = "select the contact";
+"title.debug" = "Debug";
+"title.groupBlackList" = "Group black list";
+"title.createGroup" = "Create a group";
+"title.publicGroup" = "Public group";
+"title.groupSetting" = "Group Setting";
+"title.apnsSetting" = "Apns Settings";
+"title.buddyBlock" = "Black List";
+"title.apply" = "Application and notification";
+"title.groupApply" = "Group Notification";
+"title.groupSubjectChanging" = "Change group name";
+"title.groupSearchMessage" = "Search Message from History";
+"title.chatroomlist" = "Chatroom List";
+"title.robotlist" = "Robot List";
+"title.profile" = "Profile";
+
+//setting
+"setting.autoLogin" = "automatic login";
+"setting.loginUser" = "log out(%@)";
+"setting.logoutOngoing" = "loging out...";
+"setting.sortbyservertime" = "Sort message by server time";
+
+"setting.notDisturb" = "Do Not Disturb";
+"setting.showDetail" = "Show Message Details on Lock Screen";
+"setting.open" = "On";
+"setting.nightOpen" = "On only from 10pm to 7am.";
+"setting.close" = "Off";
+"setting.sureNotDisturb" = "this setting will cause all day in the don't disturb mode, will no longer receive push messages. Whether or not to continue?";
+
+"setting.uploadLog" = "upload run log";
+"setting.sdkVersion" = "SDK version";
+"setting.uploading" = "uploading...";
+"setting.uploadSuccess" = "uploaded successfully";
+"setting.uploadFail" = "uploaded failed";
+"setting.editName" = "Edit NickName";
+"setting.inputName" = "Please input nickname";
+"setting.saveName" = "Save Nickname";
+"setting.namenotempty" = "Name cannot be empty";
+"setting.personalInfo" = "Profile";
+"setting.personalInfoUpload" = "Profile Image";
+"setting.edittips" = "After setting this nickname, chat with the iOS client demo project, iOS will display this nickname is not a EaseMob ID, if the other party to use the Android client this setting is not effective";
+"setting.iospushname" = "iOS push nickname";
+"setting.useIp" = "Use IP";
+"setting.deleteConWhenLeave" = "Delete conversation when leave a group";
+"setting.microphoneNoAuthority" = "No microphone permissions";
+"setting.microphoneAuthority" = "Please open in \"Setting\"-\"Privacy\"-\"Microphone\".";
+"setting.cameraNoAuthority" = "No camera permissions";
+"setting.cameraAuthority" = "Please open in \"Setting\"-\"Privacy\"-\"Camera\".";
+"setting.cameraUpload" = "Take photo";
+"setting.localUpload" = "Images";
+"setting.profileNickname" = "NickName";
+"setting.saving" = "saving...";
+"setting.saveFailed" = "save failed";
+
+"setting.call" = "Call setting";
+"setting.call.fixedResolution" = "Fixed Resolution";
+"setting.call.autoResolution" = "Auto Resolution";
+"setting.call.bitrate" = "Set Bitrate";
+"setting.call.bitrateTips" = "Set Bitrate should be 150-1000";
+"setting.call.push" = "If the offline send call push";
+"setting.call.resolution" = "Video call resolution";
+"setting.call.maxFramerate" = "Video max framerate";
+"setting.call.minKbps" = "Video min kbps";
+"setting.call.showInfo" = "Show video call info";
+
+//NSDateCategory
+"NSDateCategory.text1" = "one minute";
+"NSDateCategory.text2" = "%.f minutes ago";
+"NSDateCategory.text3" = "%.f hours ago";
+"NSDateCategory.text4" = "%.f days ago";
+"NSDateCategory.text5" = "M-d";
+"NSDateCategory.text6" = "%.f years ago";
+"NSDateCategory.text7" = "M-d %@";
+"NSDateCategory.text8" = "M-d HH:mm";
+"NSDateCategory.text9" = "aa hh:mm";
+"NSDateCategory.text10" = "aa hh:mm";
+"NSDateCategory.text11" = "aa hh:mm";
+"NSDateCategory.text12" = "aa hh:mm";
+"NSDateCategory.text13" = "M-d HH:mm";
+"NSDateCategory.text14" = "today %@";
+

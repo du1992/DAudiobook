@@ -36,14 +36,22 @@
     
 }
 -(void)addBackItem{
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
 }
--(void)backAction:(UIBarButtonItem *)backItem{
+-(void)backAction{
     
     if (self.navigationController.viewControllers.count > 1 ) {
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
+-(void)addRightBarButtonItem:(UIImage *)rightImage{
+      self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithImage:rightImage style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
+    
+}
+-(void)rightItemClick{
+    
+}
+
 - (NSMutableArray *)listArray {
     if (_listArray == nil) {
         _listArray = [NSMutableArray array];

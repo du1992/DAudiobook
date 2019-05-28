@@ -11,11 +11,16 @@
 #import "DAlbumHeadView.h"
 #import "DSongModel.h"
 #import "DMusicDetailVIewController.h"
+#import "DPostViewController.h"
+#import "DShareView.h"
 
 @interface DAlbumViewController ()
 
-@property(nonatomic,strong)DAlbumHeadView  *albumHeadView;
+@property(nonatomic,strong)  DAlbumHeadView    *albumHeadView;
+@property(nonatomic, strong) DShareView        *shareView;
+@property(nonatomic,strong)  NSMutableArray    *discussArray;
 
+@property(nonatomic,strong)  UIButton*collectionButton;
 @end
 
 @implementation DAlbumViewController
@@ -25,8 +30,26 @@
     
     [self addBackItem];
     [self onHeaderRefreshing];
+    
+     [self addRightBarButtonItem:[[UIImage imageNamed:@"更多"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    id input =DUserDefaultsGET(kDiscuss);
+    self.discussArray=[DRadioModel mj_objectArrayWithKeyValuesArray:input];
+    if (!self.discussArray) {
+        self.discussArray=[NSMutableArray array];
+    }
+    DRadioModel *obj=[self.model isEqualRadioModel:self.discussArray];
+    if (obj) {
+        [self.collectionButton setTitle:@"已收藏" forState:0];
+    }
+    self.shareView=[[DShareView alloc]initWithFrame:CGRectMake(0,0,kScreenWidth,kScreenHeight)];
+    [self.view addSubview:self.shareView];
 }
-
+//分享
+-(void)rightItemClick{
+     [self.shareView show];
+    
+}
 //区头
 -(void)initializeTableHeaderView{
     self.albumHeadView=[[DAlbumHeadView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)];
@@ -40,13 +63,15 @@
     //收藏
     UIButton*collectionButton=[self getBottomButton:[UIColor blackColor] frame:CGRectMake(0, kScreenHeight-40, kScreenWidth/2, 40) image:ImageNamed(@"收藏到歌单") title:@"收藏"];
     [self.view addSubview:collectionButton];
+    [collectionButton addTarget:self action:@selector(collectionClick) forControlEvents:UIControlEventTouchUpInside];
+    self.collectionButton=collectionButton;
     
- 
-    
+   
     
     //讨论
     UIButton*discussButton=[self getBottomButton:AppColor(225,89, 81) frame:CGRectMake(kScreenWidth/2, kScreenHeight-40, kScreenWidth/2, 40) image:ImageNamed(@"评论") title:@"讨论"];
     [self.view addSubview:discussButton];
+    [discussButton addTarget:self action:@selector(discussClick) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel*discussLabel=[[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth/2-40, 5,40, 20)];
     discussLabel.text   =@"99+";
@@ -55,6 +80,28 @@
     [discussButton addSubview:discussLabel];
     
 }
+//收藏
+-(void)collectionClick{
+    DRadioModel *obj=[self.model isEqualRadioModel:self.discussArray];
+    if (obj) {
+       [self.discussArray removeObject:obj];
+        id input=[DRadioModel mj_keyValuesArrayWithObjectArray:self.discussArray];
+        DUserDefaultsSET(input,kDiscuss);
+        [self.collectionButton setTitle:@"收藏" forState:0];
+    }else{
+        [self.discussArray addObject:self.model];
+        id input=[DRadioModel mj_keyValuesArrayWithObjectArray:self.discussArray];
+        DUserDefaultsSET(input,kDiscuss);
+        [self.collectionButton setTitle:@"已收藏" forState:0];
+    }
+}
+//讨论
+-(void)discussClick{
+    DPostViewController *VC = [[DPostViewController alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
+    
+}
+
 -(UIButton*)getBottomButton:(UIColor*)backgroundColor frame:(CGRect)frame image:(UIImage*)image title:(NSString*)title{
     UIButton*button         = [[UIButton alloc]init];
     button.backgroundColor  = backgroundColor;
@@ -90,13 +137,6 @@
     [[DPlayerManager defaultManager] reloadDataWithIndex:indexPath.row];
     DMusicDetailVIewController*VC=[[DMusicDetailVIewController alloc]init];
     [self presentDropsWaterViewController:VC];
-    
-//    [DPlayMusicView lzPlayerBottomView].isSongPlayer = YES;//修改按钮的图片
-//    [[DPlayMusicView lzPlayerBottomView] reloadDataWithIndex: [LZPlayerManager lzPlayerManager].index];
-    
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    LZMusicDetailVIewController *detail = [storyBoard instantiateViewControllerWithIdentifier:@"LZMusicDetailVIewController"];
-//    [self presentViewController:detail animated:YES completion:nil];
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

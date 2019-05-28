@@ -98,7 +98,7 @@ static DPlayerManager *_defaultManager = nil;
     if (self.index<self.musicArray.count) {
         self.index=index;
         //读取歌曲的总时间
-        NSString *time = [NSString stringWithFormat:@"%@",DUserDefaultsGET(TOTALTIME)];
+        
         self.isFristPlayerPauseBtn = YES;
         if (self.isFirstClickedListPlayer==0) {//第一次点击列表播放
             if (self.isStartPlayer) {
@@ -108,7 +108,7 @@ static DPlayerManager *_defaultManager = nil;
         self.isFirstClickedListPlayer = 1;
         // 修改播放歌曲
         [self replaceItemWithUrlString:[self currentSongModel].musicUrl];
-        [self lockScreen:time];
+        [self lockScreen:self.totalTime];
     }
 }
 //音量

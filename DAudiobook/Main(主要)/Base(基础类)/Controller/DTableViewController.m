@@ -183,7 +183,7 @@
     //设置导航栏唤醒抽屉按钮
     MMDrawerBarButtonItem *leftItem = [MMDrawerBarButtonItem itemWithNormalIcon:@"menu" highlightedIcon:nil target:self action:@selector(leftDrawerButtonPress)];
     //设置紧挨着左侧按钮的标题按钮
-    MMDrawerBarButtonItem *titleItem = [MMDrawerBarButtonItem itemWithTitle:[self getTitle] target:self action:@selector(leftDrawerButtonPress)];
+    MMDrawerBarButtonItem *titleItem = [MMDrawerBarButtonItem itemWithTitle:[self getMenuTitle] target:self action:@selector(leftDrawerButtonPress)];
     
     self.navigationItem.leftBarButtonItems = @[leftItem,titleItem];
 }
@@ -191,8 +191,8 @@
 {
     [[DAllControllersTool shareOpenController].drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-//获取title
--(NSString *)getTitle{
+//获取菜单title
+-(NSString *)getMenuTitle{
     return @"";
 }
 

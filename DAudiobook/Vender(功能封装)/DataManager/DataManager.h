@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define DUserDefaultsGET(key)         [DataManager getDataKey:key]// 取
 #define DUserDefaultsRemove(key)      [DataManager removeObjectForKey:key]// 删
 
+//收藏
+#define kDiscuss @"kdiscuss"
 
 
 @interface DataManager : NSObject

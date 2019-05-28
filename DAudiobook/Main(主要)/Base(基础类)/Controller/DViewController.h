@@ -27,10 +27,12 @@ typedef void(^UpdateTata)(DBaseModel * model,NSUInteger typeIndex);
 @property (nonatomic, strong) NSMutableArray      *listArray;
 /** 数据回调*/
 @property (nonatomic,copy) UpdateTata   updateTata;
+
 /** 添加返回按钮*/
 -(void)addBackItem;
-/** 返回*/
-- (void)backButtonClicked;
+/** 添加右边按钮*/
+-(void)addRightBarButtonItem:(UIImage *)rightImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

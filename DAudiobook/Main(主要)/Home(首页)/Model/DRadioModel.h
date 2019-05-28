@@ -31,9 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSString * albumIntro;
 
+/**
+ *  是否相同
+ */
+-(DRadioModel*)isEqualRadioModel:(NSMutableArray*)array;
 
-
-
+/**
+ *  删除
+ */
+-(DRadioModel*)deleteRadioModel:(NSMutableArray*)array;
 
 @end
 

@@ -14,6 +14,8 @@
 #import "DPlayMusicView.h"
 #import "DMeViewController.h"
 #import "DNavigationController.h"
+#import "DMusicDetailVIewController.h"
+
 @interface DLeftMenuViewController ()
 
 @property (nonatomic,strong) DMenuHeadView  *menuHeadView;
@@ -24,6 +26,7 @@
 @implementation DLeftMenuViewController
 - (void)viewDidAppear:(BOOL)animated {
     [self.menuHeadView.timer fire];
+    [self.menuHeadView refreshvView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -49,7 +52,12 @@
 -(void)initializeTableHeaderView{
      self.menuHeadView.frame=CGRectMake(0, 0, kScreenWidth,200+MenuHeadViewTopDistance);
      self.tableView.tableHeaderView = self.menuHeadView;
-    
+     WEAKSELF
+     self.menuHeadView.headerViewBlock = ^{
+        DMeViewController *VC = [[DMeViewController alloc] init];
+        DNavigationController*NVC = [[DNavigationController alloc] initWithRootViewController:VC];
+        [weakSelf presentDropsWaterViewController:NVC];
+       };
 }
 //区尾
 - (void)initializeTableFooterView
@@ -61,6 +69,16 @@
         make.bottom.equalTo(self.view.mas_bottom);
         make.height.mas_equalTo(60);
     }];
+    
+    WEAKSELF
+    self.playMusicView.bottomMusicBlock = ^(void) {
+        if ([DPlayerManager defaultManager].musicArray.count) {
+            DMusicDetailVIewController*VC=[[DMusicDetailVIewController alloc]init];
+            [weakSelf presentDropsWaterViewController:VC];
+        }else{
+             [weakSelf.view showLoadingMeg:@"未选择音乐" time:kDefaultShowTime];
+        }
+    };
   
     
 }
@@ -96,16 +114,6 @@
     if (!_menuHeadView) {
         _menuHeadView = [[DMenuHeadView alloc] init];
         [self.view addSubview:_menuHeadView];
-       
-        
-        WEAKSELF
-        _menuHeadView.headerViewBlock = ^{
-            DMeViewController *VC = [[DMeViewController alloc] init];
-            DNavigationController*NVC = [[DNavigationController alloc] initWithRootViewController:VC];
-            [weakSelf presentDropsWaterViewController:NVC];
-        };
-        
-        
     }
     return _menuHeadView;
 }
@@ -113,19 +121,7 @@
 {
     if (!_playMusicView) {
         _playMusicView= [[DPlayMusicView alloc]init];
-        _playMusicView.backgroundColor = AppColor(38, 184, 242);
-        [self.view addSubview:_playMusicView];
-        WEAKSELF
-        _playMusicView.bottomMusicBlock = ^(DSongModel * _Nonnull songModel) {
-            
-        };
-            
-//            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            LZMusicDetailVIewController *detail = [storyBoard instantiateViewControllerWithIdentifier:@"LZMusicDetailVIewController"];
-//            [vc presentViewController:detail animated:YES completion:nil];
-            
-        
-        
+         [self.view addSubview:_playMusicView];
     }
     return _playMusicView;
 }

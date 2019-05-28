@@ -19,14 +19,7 @@
     
     [self onHeaderRefreshing];
     [self GDTadvertising];
-//    BmobUser *bUser = [BmobUser currentUser];
-//    if (!bUser) {
-//        //对象为空时，可打开用户注册界面
-//
-//        [SDKAppStore userPopupWindow];
-//
-//    }
-    
+
 }
 #pragma mark - 共享方法
 //数据处理
@@ -49,7 +42,7 @@
     return HotNovelUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"热门";
 }
 
@@ -83,7 +76,7 @@
     return CrosstalkUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"相声";
 }
 
@@ -100,7 +93,7 @@
     return FantasyUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"玄幻";
 }
 
@@ -115,7 +108,7 @@
     return CityUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"都市";
 }
 @end
@@ -129,7 +122,7 @@
     return TerroristUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"恐怖";
 }
 
@@ -144,7 +137,7 @@
     return HistoryUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"历史";
 }
 
@@ -159,7 +152,7 @@
     return MartialUrl;
 }
 //获取title
--(NSString *)getTitle{
+-(NSString *)getMenuTitle{
     return @"武侠";
 }
 

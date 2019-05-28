@@ -24,24 +24,12 @@
 }
 -(void)setItems
 {
-//   UIColorFromRGBValue(0X3be88e)
-    
-//   [[UINavigationBar appearance]setBackgroundImage:[UIImage createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-//
-//    NSDictionary *dic = @{NSForegroundColorAttributeName:[UIColor blackColor]};
-//    [[UINavigationBar appearance] setTitleTextAttributes:dic];
-//    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
-//    [[UIBarButtonItem appearance]setTitleTextAttributes:dic forState:UIControlStateNormal];
-//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
-//
-//    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-    
+
     //动态更改导航背景 / 样式
     //开启编辑
     UINavigationBar *bar = [UINavigationBar appearance];
     //设置导航条背景颜色
-    [bar setBarTintColor:AppColor(39, 184, 232)];
+    [bar setBarTintColor:ImportantColor];
     //设置字体颜色
     [bar setTintColor:[UIColor whiteColor]];
     //设置样式

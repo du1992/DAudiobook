@@ -28,6 +28,7 @@ typedef void(^HeaderViewClickEvent)(void);
 @property(nonatomic, strong) UIImageView    *scrollImageView;
 @property(nonatomic, strong) UIButton       *tapButton;
 
+-(void)refreshvView;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <StoreKit/StoreKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -50,11 +51,74 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 #define MartialUrl @"武侠"
+/*
+ 武侠小说url
+ */
+
+#define JokesUrl @"段子"
+
+/*
+ 全部照片url
+ */
+
+#define AllUrl @"全部"
+
+/*
+ 性感照片url
+ */
+
+#define SexyUrl @"性感"
+
+/*
+ 丰满照片url
+ */
+
+#define PlumpUrl @"丰满"
+
+/*
+ 丝袜照片url
+ */
+
+#define SilkStockingsUrl @"丝袜"
+
+/*
+ 美腿照片url
+ */
+
+#define LegUrl @"美腿"
+
+/*
+ 清新照片url
+ */
+
+#define SportUrl @"清新"
+
+/*
+ 视频url
+ */
+
+#define VideoUrl @"视频"
+
+
 
 
 
 
 @interface DInterfaceUrl : NSObject
+
+//用户信息
++(void)userPopupWindow;
+
+//获取随机名字
++(NSString*)getNameString;
+
+//获取随机头像ID
++(NSString*)getUserLogoString;
+
+//获取随机头像
++(NSString*)getImgString:(NSString*)imgId;
+
+
 
 
 @end

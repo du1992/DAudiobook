@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef  void(^DBottomMusicClick)(DSongModel *songModel);
+typedef  void(^DBottomMusicClick)(void);
 
 
 
@@ -49,10 +49,7 @@ typedef  void(^DBottomMusicClick)(DSongModel *songModel);
  */
 @property (nonatomic,strong) DSongModel *songModel;
 
-/**
- *  首页的播放按钮
- */
-@property (nonatomic,strong) UIButton *SQPlayBtn;
+
 
 /*定时器*/
 @property(nonatomic,strong)NSTimer     *timer;

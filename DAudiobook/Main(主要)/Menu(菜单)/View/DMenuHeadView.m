@@ -7,7 +7,7 @@
 //
 
 #import "DMenuHeadView.h"
-
+#import <BmobSDK/Bmob.h>
 #define kIconView_W 40
 #define kIconView_H 40
 #define kTimeInterval 30
@@ -171,5 +171,21 @@
     return _timer;
 }
 
-
+-(void)refreshvView{
+    BmobUser*user = [BmobUser currentUser];
+    if (user) {
+        NSString*nickName=[user objectForKey:@"nickName"];
+        if (nickName.length) {
+           self.nameLable.text=nickName;
+        }
+        NSString*userLogo=[user objectForKey:@"userLogo"];
+        if (userLogo.length) {
+            [self.iconView sd_setImageWithURL:[NSURL URLWithString:[DInterfaceUrl getImgString:userLogo]] placeholderImage:[UIImage imageNamed:@"小熊明星资讯"]];
+        }
+        
+      
+        
+    }
+    
+}
 @end

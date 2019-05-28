@@ -14,8 +14,7 @@
 +(id)getDataKey:(NSString*)key{
     
     NSData *dataObject= [[NSUserDefaults standardUserDefaults]objectForKey:key];
-    return dataObject;
-//    return [NSKeyedUnarchiver unarchiveObjectWithData:dataObject];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:dataObject];
     
     
 }

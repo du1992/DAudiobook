@@ -10,4 +10,30 @@
 
 @implementation DRadioModel
 
+-(DRadioModel*)isEqualRadioModel:(NSMutableArray*)array{
+    for (DRadioModel *obj in array) {
+        if (obj.albumId==self.albumId) {
+            return obj;
+            
+        }
+    }
+    
+    return nil;
+}
+
+
+-(DRadioModel*)deleteRadioModel:(NSMutableArray*)array{
+    for (DRadioModel *obj in array) {
+        if (obj.albumId==self.albumId) {
+            return obj;
+            
+        }
+    }
+    
+    return nil;
+    
+    
+}
+
+
 @end
