@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GDTTrack.h"
 #import "GDTSplashAd.h"
 
 

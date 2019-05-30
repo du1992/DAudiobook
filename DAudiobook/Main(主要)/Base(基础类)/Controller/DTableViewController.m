@@ -13,10 +13,10 @@
 #import "UIViewController+MMDrawerController.h"
 #import "DAllControllersTool.h"
 
-#import "GDTTrack.h"
+
 #import "GDTMobBannerView.h"
 
-#define TCTableViewDefaultBottmRefreshingMargin 800
+
 
 @interface DTableViewController ()<UITableViewDelegate,UITableViewDataSource,GDTMobBannerViewDelegate>{
      CGFloat _startDragY;
@@ -34,7 +34,7 @@
     [self initializeTableView];
     [self initializeTableHeaderView];
     [self initializeTableFooterView];
-    [self initializeRefresh];
+//    [self initializeRefresh];
     
     [self setupNavItem];
     
@@ -69,15 +69,18 @@
     WEAKSELF
     // 1.下拉刷新
     MJRefreshHeader *header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        [weakSelf  onHeaderRefreshing];
+        [weakSelf                    onHeaderRefreshing];
+        [weakSelf.tableView.mj_header    endRefreshing];
     }];
-    self.header = header;
+    self.tableView.mj_header = header;
+  
     
     // 2.上拉刷新(上拉加载更多数据)
     MJRefreshFooter *footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-         [weakSelf  onFooterRefreshing];
+         [weakSelf                       onFooterRefreshing];
+         [weakSelf.tableView.mj_footer    endRefreshing];
     }];
-    self.footer = footer;
+    self.tableView.mj_footer = footer;
 }
 
 - (void) setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated{
@@ -91,14 +94,7 @@
 }
 - (void) contentOffsetChanged:(CGPoint)contentOffset{
     //判断是向下划
-    if( _startDragY >= 0 && self.tableView.isDragging && contentOffset.y - _startDragY > 30){
-        CGFloat margin = self.footerRefresingBeginBottmMarign?self.footerRefresingBeginBottmMarign:TCTableViewDefaultBottmRefreshingMargin;
-        
-        if( self.tableView.contentOffset.y + self.tableView.frame.size.height + margin >= self.tableView.contentSize.height){
-            [self onFooterRefreshing];
-            _startDragY = -1;
-        }
-    }
+   
 }
 #pragma mark - 上啦
 - (void)onFooterRefreshing{
@@ -129,7 +125,7 @@
         if (!error) {
              [self dataProcessingIsRemove:resetRequstData input:input];
         }else{
-             [self dataProcessingIsRemove:resetRequstData input:input];
+              [self.view showLoadingMeg:kNetWorkError time:kDefaultShowTime];
         }
          [weakSelf endNetworkRequest];
     }];
@@ -201,16 +197,10 @@
 #pragma mark - 广告
 -(void)GDTadvertising{
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0,0,GDTMOB_AD_SUGGEST_SIZE_728x90.width,GDTMOB_AD_SUGGEST_SIZE_728x90.height)
-                                                      appkey:GDTAppkey placementId:GDTPlacementIdD];
-    } else {
-        bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0,0,GDTMOB_AD_SUGGEST_SIZE_320x50.width,GDTMOB_AD_SUGGEST_SIZE_320x50.height)
-                                                      appkey:GDTAppkey placementId:GDTPlacementIdD];
-    }
+    bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0,0,kScreenWidth,40)
+                                                  appId:GDTAppkey placementId:GDTPlacementIdD];
     
-    
-    if (IS_OS_7_OR_LATER) {
+  if (IS_OS_7_OR_LATER) {
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
     }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GDTSDKDefines.h"
 
 @class GDTNativeExpressAdView;
 @class GDTNativeExpressAd;
@@ -26,14 +27,14 @@
 - (void)nativeExpressAdFailToLoad:(GDTNativeExpressAd *)nativeExpressAd error:(NSError *)error;
 
 /**
- * 原生模板广告渲染成功
+ * 原生模板广告渲染成功, 此时的 nativeExpressAdView.size.height 根据 size.width 完成了动态更新。
  */
-- (void) nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView *)nativeExpressAdView;
+- (void)nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
  * 原生模板广告渲染失败
  */
-- (void) nativeExpressAdViewRenderFail:(GDTNativeExpressAdView *)nativeExpressAdView;
+- (void)nativeExpressAdViewRenderFail:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
  * 原生模板广告曝光回调
@@ -66,14 +67,39 @@
 - (void)nativeExpressAdViewWillDissmissScreen:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
- * 全屏广告页关闭
+ * 全屏广告页将要关闭
  */
 - (void)nativeExpressAdViewDidDissmissScreen:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
- * 原生模板广告点击之后应用进入后台时回调
+ * 详解:当点击应用下载或者广告调用系统程序打开时调用
  */
 - (void)nativeExpressAdViewApplicationWillEnterBackground:(GDTNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ * 原生模板视频广告 player 播放状态更新回调
+ */
+- (void)nativeExpressAdView:(GDTNativeExpressAdView *)nativeExpressAdView playerStatusChanged:(GDTMediaPlayerStatus)status;
+
+/**
+ * 原生视频模板详情页 WillPresent 回调
+ */
+- (void)nativeExpressAdViewWillPresentVideoVC:(GDTNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ * 原生视频模板详情页 DidPresent 回调
+ */
+- (void)nativeExpressAdViewDidPresentVideoVC:(GDTNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ * 原生视频模板详情页 WillDismiss 回调
+ */
+- (void)nativeExpressAdViewWillDismissVideoVC:(GDTNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ * 原生视频模板详情页 DidDismiss 回调
+ */
+- (void)nativeExpressAdViewDidDismissVideoVC:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 @end
 
@@ -84,12 +110,34 @@
  */
 @property (nonatomic, weak) id<GDTNativeExpressAdDelegete> delegate;
 
+
+/**
+ *  非 WiFi 网络，是否自动播放。默认 NO。loadAd 前设置。
+ */
+
+@property (nonatomic, assign) BOOL videoAutoPlayOnWWAN;
+
+/**
+ *  自动播放时，是否静音。默认 YES。loadAd 前设置。
+ */
+@property (nonatomic, assign) BOOL videoMuted;
+
+/**
+ 请求视频的时长上限，有效值范围为[5,30]。
+ */
+@property (nonatomic) NSInteger maxVideoDuration;
+
 /**
  *  构造方法
- *  详解：appkey是应用id, placementId是广告位id, adSize是广告展示的宽高(具体参看联盟广告位配置)
+ *  详解：appId - 媒体 ID
+ *       placementId - 广告位 ID
+ *       adSize - 广告展示的宽高
  */
--(instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId adSize:(CGSize)size;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId adSize:(CGSize)size;
 
-- (void)loadAd:(int)count;
+- (void)loadAd:(NSInteger)count;
+
+#pragma mark - DEPRECATED
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId adSize:(CGSize)size GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId:adSize instead.");
 
 @end

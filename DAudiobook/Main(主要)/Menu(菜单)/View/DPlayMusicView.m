@@ -153,7 +153,7 @@
         _progressSlider=[[UISlider alloc]init];
         [self addSubview:_progressSlider];
         _progressSlider.maximumTrackTintColor = [UIColor whiteColor];
-        _progressSlider.minimumTrackTintColor = [UIColor colorWithRed:255 / 255.0 green:209 / 255.0 blue:2 / 255.0 alpha:1.0];
+        _progressSlider.minimumTrackTintColor = ImportantColor;
         [_progressSlider setThumbImage:[UIImage new] forState:UIControlStateNormal];
         [_progressSlider setThumbImage:[UIImage new] forState:UIControlStateHighlighted];
         _progressSlider.value=0;

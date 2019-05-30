@@ -8,8 +8,11 @@
 
 #import "DMusicDetailVIewController.h"
 #import "DChooseMusicView.h"
+#import "GDTMobInterstitial.h"
 
-@interface DMusicDetailVIewController ()
+@interface DMusicDetailVIewController ()<GDTMobInterstitialDelegate>{
+    GDTMobInterstitial *_interstitialObj;
+}
 
 @property(nonatomic, strong) NSTimer *timer;
 
@@ -29,6 +32,10 @@
    
     self.chooseMusicView=[[DChooseMusicView alloc]initWithFrame:CGRectMake(0,0,kScreenWidth,kScreenHeight)];
     [self.view addSubview:self.chooseMusicView];
+    
+    _interstitialObj = [[GDTMobInterstitial alloc] initWithAppId:GDTAppkey placementId:GDTPlacementIdC];
+    _interstitialObj.delegate = self;
+    [_interstitialObj loadAd];
     
     
 }
@@ -96,4 +103,20 @@
     self.timer = nil;
     
 }
+
+
+
+// 广告预加载成功回调
+//
+// 详解:当接收服务器返回的广告数据成功后调用该函数
+- (void)interstitialSuccessToLoadAd:(GDTMobInterstitial *)interstitial
+{
+    [_interstitialObj presentFromRootViewController:self];
+}
+
+
+
+
+
+
 @end

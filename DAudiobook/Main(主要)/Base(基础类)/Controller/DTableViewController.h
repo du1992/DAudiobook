@@ -16,8 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UITableView         *tableView;
 @property (nonatomic, strong) DPageModel          *pageModel;
 
-@property (nonatomic, strong)  MJRefreshHeader    *header;
-@property (nonatomic, strong)  MJRefreshFooter    *footer;
+
 
 
 /** 触发bottom刷新的距离，默认为TCTableViewDefaultBottmRefreshingMargin:800 */
@@ -30,7 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onHeaderRefreshing;
 /** 加载 广告 */
 -(void)GDTadvertising;
-
+/**加载刷新控件*/
+-(void)initializeRefresh;
 
 
 @end

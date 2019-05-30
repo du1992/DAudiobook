@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GDTSDKDefines.h"
 
 @class GDTMobInterstitial;
 
@@ -46,8 +47,7 @@
 - (void)interstitialDidDismissScreen:(GDTMobInterstitial *)interstitial;
 
 /**
- *  应用进入后台时回调
- *  详解: 当点击下载应用时会调用系统程序打开，应用切换到后台
+ *  详解:当点击应用下载或者广告调用系统程序打开时调用
  */
 - (void)interstitialApplicationWillEnterBackground:(GDTMobInterstitial *)interstitial;
 
@@ -89,12 +89,12 @@
  *  GPS精准广告定位模式开关,默认Gps关闭
  *  详解：[可选]GPS精准定位模式开关，YES为开启GPS，NO为关闭GPS，建议设为开启，可以获取地理位置信息，提高广告的填充率，增加收益。
  */
-@property(nonatomic, assign) BOOL isGpsOn;
+@property (nonatomic, assign) BOOL isGpsOn;
 
 /**
  *  插屏广告预加载是否完成
  */
-@property (nonatomic) BOOL isReady;
+@property (nonatomic, assign) BOOL isReady;
 
 /**
  *  委托对象
@@ -103,20 +103,24 @@
 
 /**
  *  构造方法
- *  详解：appkey是应用id, placementId是广告位id
+ *  详解：appId - 媒体 ID
+ *       placementId - 广告位 ID
  */
--(id)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId;
 
 /**
  *  广告发起请求方法
  *  详解：[必选]发起拉取广告请求
  */
--(void)loadAd;
+- (void)loadAd;
 
 /**
  *  广告展示方法
  *  详解：[必选]发起展示广告请求, 必须传入用于显示插播广告的UIViewController
  */
--(void)presentFromRootViewController:(UIViewController *)rootViewController;
+- (void)presentFromRootViewController:(UIViewController *)rootViewController;
+
+#pragma mark - DEPRECATED
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId: instead.");
 
 @end

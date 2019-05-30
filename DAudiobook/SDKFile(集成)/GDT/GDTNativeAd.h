@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
+#import "GDTSDKDefines.h"
 
 extern NSString* const GDTNativeAdDataKeyTitle;
 extern NSString* const GDTNativeAdDataKeyDesc;
@@ -15,6 +16,9 @@ extern NSString* const GDTNativeAdDataKeyIconUrl;
 extern NSString* const GDTNativeAdDataKeyImgUrl;
 extern NSString* const GDTNativeAdDataKeyAppRating;
 extern NSString* const GDTNativeAdDataKeyAppPrice;
+extern NSString* const GDTNativeAdDataKeyImgList;
+extern NSString* const GDTNativeAdDataKeyImgWidth;
+extern NSString* const GDTNativeAdDataKeyImgHeight;
 
 @interface GDTNativeAdData : NSObject
 
@@ -28,16 +32,23 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
  *          4. GDTNativeAdDataKeyImgUrl     大图Url
  *          5. GDTNativeAdDataKeyAppRating  应用类广告的星级
  *          6. GDTNativeAdDataKeyAppPrice   应用类广告的价格
+ *          7. GDTNativeAdDataKeyImgList    三小图广告的图片集合
+ *          8. GDTNativeAdDataKeyImgWidth   素材宽度
+ *          9. GDTNativeAdDataKeyImgHeight  素材高度
  */
 @property (nonatomic, retain, readonly) NSDictionary *properties;
 /*
  *  判断两个原生广告数据对象是否相等
  */
--(BOOL) equalsAdData:(GDTNativeAdData *)data;
+- (BOOL)equalsAdData:(GDTNativeAdData *)data;
 /*
  *  获取该原生广告是否为应用类广告
  */
--(BOOL) isAppAd;
+- (BOOL)isAppAd;
+/*
+ *  获取该原生广告是否为三小图广告，当为三小图广告时，可以通过GDTNativeAdDataKeyImgList获取三张图片资源供渲染
+ */
+- (BOOL)isThreeImgsAd;
 
 @end
 
@@ -48,12 +59,12 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
 /**
  *  原生广告加载广告数据成功回调，返回为GDTNativeAdData对象的数组
  */
--(void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray;
+- (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray;
 
 /**
  *  原生广告加载广告数据失败回调
  */
--(void)nativeAdFailToLoad:(NSError *)error;
+- (void)nativeAdFailToLoad:(NSError *)error;
 
 @optional
 /**
@@ -88,16 +99,17 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
 
 /**
  *  构造方法
- *  详解：appkey是应用id, placementId是广告位id
+ *  详解：appId - 媒体 ID
+ *       placementId - 广告位 ID
  */
--(instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId;
 
 /**
  *  广告发起请求方法
  *  详解：[必选]发起拉取广告请求,在获得广告数据后回调delegate
  *  @param adCount 一次拉取广告的个数
  */
--(void)loadAd:(int)adCount;
+- (void)loadAd:(int)adCount;
 
 /**
  *  广告数据渲染完毕即将展示时调用方法
@@ -105,7 +117,7 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
  *      @param nativeAdData 广告渲染的数据对象
  *      @param view         渲染出的广告结果页面
  */
--(void)attachAd:(GDTNativeAdData *)nativeAdData toView:(UIView *)view;
+- (void)attachAd:(GDTNativeAdData *)nativeAdData toView:(UIView *)view;
 
 /**
  *  广告点击调用方法
@@ -113,6 +125,9 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
  *      或打开系统Safari，来展现广告目标页面
  *      @param nativeAdData 用户点击的广告数据对象
  */
--(void)clickAd:(GDTNativeAdData *)nativeAdData;
+- (void)clickAd:(GDTNativeAdData *)nativeAdData;
+
+#pragma mark - DEPRECATED
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId: instead.");
 
 @end

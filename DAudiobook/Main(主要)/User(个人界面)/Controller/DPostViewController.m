@@ -25,7 +25,7 @@
     self.title=@"论坛";
     
     [self addBackItem];
-    
+    [self initializeRefresh];
     [self addRightBarButtonItem:[[UIImage imageNamed:@"编辑"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self onHeaderRefreshing];
     
@@ -39,6 +39,9 @@
 #pragma mark - 共享方法
 //数据处理
 -(void)dataProcessingIsRemove:(BOOL)isRemove input:(id)input{
+    if (isRemove) {
+        [self.listArray removeAllObjects];
+    }
     NSString *className = @"DPost";
     BmobQuery *query = [BmobQuery queryWithClassName:className];
     [query orderByDescending:@"updatedAt"];
@@ -50,9 +53,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
          [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         if (!error) {
-            if (isRemove) {
-                [weakSelf.listArray removeAllObjects];
-            }
             for (BmobObject *obj in array) {
                 DPostModel *model    = [DPostModel new];
                 model.content        = [obj objectForKey:@"content"];

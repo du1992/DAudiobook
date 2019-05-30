@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GDTSDKDefines.h"
 
 /**
  *  广点通推荐尺寸,开发者在嵌入Banner条时，可以手动设置Banner条的宽度用来满足场景需求，
  *  而高度的话广点通侧不建议更改，否则显示效果会有影响
  */
-#define GDTMOB_AD_SUGGEST_SIZE_320x50    CGSizeMake(kScreenWidth, 50) //For iPhone
-#define GDTMOB_AD_SUGGEST_SIZE_468x60    CGSizeMake(kScreenWidth, 60) //For iPad
-#define GDTMOB_AD_SUGGEST_SIZE_728x90    CGSizeMake(kScreenWidth, 90) //For iPad
+#define GDTMOB_AD_SUGGEST_SIZE_320x50    CGSizeMake(320, 50) //For iPhone
+#define GDTMOB_AD_SUGGEST_SIZE_468x60    CGSizeMake(468, 60) //For iPad
+#define GDTMOB_AD_SUGGEST_SIZE_728x90    CGSizeMake(728, 90) //For iPad
 
 @protocol GDTMobBannerViewDelegate <NSObject>
 
@@ -36,8 +37,7 @@
 - (void)bannerViewFailToReceived:(NSError *)error;
 
 /**
- *  应用进入后台时调用
- *  详解:当点击应用下载或者广告调用系统程序打开，应用将被自动切换到后台
+ *  详解:当点击应用下载或者广告调用系统程序打开时调用
  */
 - (void)bannerViewWillLeaveApplication;
 
@@ -75,6 +75,8 @@
 
 @interface GDTMobBannerView : UIView
 
+
+
 /**
  *  父视图
  *  详解：[必选]需设置为显示广告的UIViewController
@@ -87,7 +89,7 @@
 @property(nonatomic, weak) id<GDTMobBannerViewDelegate> delegate;
 
 /**
- *  广告刷新间隔 [可选]
+ *  广告刷新间隔，范围 [30, 120] 秒，默认值 30 秒。设 0 则不刷新。 [可选]
  */
 @property(nonatomic, assign) int interval;
 
@@ -109,14 +111,28 @@
 
 /**
  *  构造方法
- *  详解：frame是广告banner展示的位置和大小，包含四个参数(x, y, width, height)
- *       appkey是应用id
- *       placementId是广告位id
+ *  详解：appId - 媒体 ID
+ *       placementId - 广告位 ID
  */
-- (id) initWithFrame:(CGRect)frame appkey:(NSString *)appkey placementId:(NSString *)placementId;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId;
+
+/**
+ *  构造方法
+ *  详解：frame - banner 展示的位置和大小
+ *       appId - 媒体 ID
+ *       placementId - 广告位 ID
+ */
+
+- (instancetype)initWithFrame:(CGRect)frame appId:(NSString *)appId placementId:(NSString *)placementId;
 
 /**
  *  拉取并展示广告
  */
-- (void) loadAdAndShow;
+- (void)loadAdAndShow;
+
+#pragma mark - DEPRECATED
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId: instead.");
+- (instancetype)initWithFrame:(CGRect)frame appkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithFrame:appId:placementId: instead.");
+
+
 @end
