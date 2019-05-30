@@ -2,10 +2,10 @@
 👇下面是介绍，也可以直接[下载源码](https://github.com/kevindcw/DAudiobook)
 ## 效果图：
 目前主要是有菜单页面，音乐播放，视频播放，文字段子，论坛讨论和图片美图这几个大的板块
-![菜单页](https://upload-images.jianshu.io/upload_images/3323633-8239e256adf56f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![音乐播放](https://upload-images.jianshu.io/upload_images/3323633-80cc322add9fc0c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![论坛讨论](https://upload-images.jianshu.io/upload_images/3323633-f73207beb911171f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![图片美图](https://upload-images.jianshu.io/upload_images/3323633-130980a888e87783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+[菜单页](https://upload-images.jianshu.io/upload_images/3323633-8239e256adf56f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+[音乐播放](https://upload-images.jianshu.io/upload_images/3323633-80cc322add9fc0c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+[论坛讨论](https://upload-images.jianshu.io/upload_images/3323633-f73207beb911171f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+[图片美图](https://upload-images.jianshu.io/upload_images/3323633-130980a888e87783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
 ## 用到的第三方SDK：
 Bmob后端云（主要用于，用户的登录注册和论坛的发布）
