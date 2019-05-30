@@ -4,7 +4,7 @@
 ![菜单页](https://upload-images.jianshu.io/upload_images/3323633-8239e256adf56f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 ![论坛讨论](https://upload-images.jianshu.io/upload_images/3323633-f73207beb911171f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 ![图片美图](https://upload-images.jianshu.io/upload_images/3323633-130980a888e87783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![音乐播放](https://upload-images.jianshu.io/upload_images/3323633-80cc322add9fc0c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+![音乐播放](https://upload-images.jianshu.io/upload_images/3323633-eb69d0b81d2e24f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 ## 用到的第三方SDK：
 Bmob后端云       （主要用于，用户的登录注册和论坛的发布）
 Bmob推送         （用于推送信息到手机）
