@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Language](https://img.shields.io/badge/javascript-ES6-orange.svg)](https://www.javascript.com/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/goolhanrry/Weapp-Demo-LemonJournal.svg)](https://github.com/goolhanrry/Weapp-Demo-LemonJournal/commits/master)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/goolhanrry/Weapp-Demo-LemonJournal.svg?colorB=fa5b19)](https://github.com/goolhanrry/Weapp-Demo-LemonJournal)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/kevindcw/DAudiobook.svg?colorB=fa5b19)](https://github.com/kevindcw/DAudiobook)
 
 
 
