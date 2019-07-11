@@ -25,8 +25,9 @@
     self.title=@"论坛";
     
     [self addBackItem];
-    [self initializeRefresh];
     [self addRightBarButtonItem:[[UIImage imageNamed:@"编辑"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    [self initializeRefresh];
     [self onHeaderRefreshing];
     
 }
@@ -55,11 +56,7 @@
         if (!error) {
             for (BmobObject *obj in array) {
                 DPostModel *model    = [DPostModel new];
-                model.content        = [obj objectForKey:@"content"];
-                model.authorID       = [obj objectForKey:@"authorID"];
-                model.nickName       = [obj objectForKey:@"nickName"];
-                model.userLogo       = [obj objectForKey:@"userLogo"];
-                model.isAnonymous    = [obj objectForKey:@"isAnonymous"];
+                [model modelDealWith:obj];
                 [model calculateHeight];
                 [self.listArray addObject:model];
             }

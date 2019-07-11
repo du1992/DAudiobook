@@ -23,7 +23,7 @@
 - (UIImageView *)gifView
 {
     if (!_gifView) { 
-        UIImageView *gifView = [[UIImageView alloc] init];
+        UIImageView *gifView = [[UIImageView alloc] init]; 
         [self addSubview:_gifView = gifView]; 
     } 
     return _gifView; 
@@ -99,13 +99,13 @@
     } else {
         self.gifView.contentMode = UIViewContentModeRight;
         
-        CGFloat stateWidth = self.stateLabel.mj_textWith;
+        CGFloat stateWidth = self.stateLabel.mj_textWidth;
         CGFloat timeWidth = 0.0;
         if (!self.lastUpdatedTimeLabel.hidden) {
-            timeWidth = self.lastUpdatedTimeLabel.mj_textWith;
+            timeWidth = self.lastUpdatedTimeLabel.mj_textWidth;
         }
         CGFloat textWidth = MAX(stateWidth, timeWidth);
-        self.gifView.mj_w = self.mj_w * 0.5 - textWidth * 0.3 - self.labelLeftInset;
+        self.gifView.mj_w = self.mj_w * 0.5 - textWidth * 0.5 - self.labelLeftInset;
     }
 }
 

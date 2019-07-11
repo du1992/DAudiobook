@@ -55,17 +55,18 @@
     [self removeObservers];
     
     if (newSuperview) { // 新的父控件
-        // 设置宽度
-        self.mj_w = newSuperview.mj_w;
-        // 设置位置
-        self.mj_x = 0;
-        
         // 记录UIScrollView
         _scrollView = (UIScrollView *)newSuperview;
+        
+        // 设置宽度
+        self.mj_w = _scrollView.mj_w;
+        // 设置位置
+        self.mj_x = -_scrollView.mj_insetL;
+    
         // 设置永远支持垂直弹簧效果
         _scrollView.alwaysBounceVertical = YES;
         // 记录UIScrollView最开始的contentInset
-        _scrollViewOriginalInset = _scrollView.contentInset;
+        _scrollViewOriginalInset = _scrollView.mj_inset;
         
         // 添加监听
         [self addObservers];
@@ -95,7 +96,7 @@
 - (void)removeObservers
 {
     [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentOffset];
-    [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentSize];;
+    [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentSize];
     [self.pan removeObserver:self forKeyPath:MJRefreshKeyPathPanState];
     self.pan = nil;
 }
@@ -136,9 +137,7 @@
     _state = state;
     
     // 加入主队列的目的是等setState:方法调用完毕、设置完文字后再去布局子控件
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self setNeedsLayout];
-    });
+    MJRefreshDispatchAsyncOnMainQueue([self setNeedsLayout];)
 }
 
 #pragma mark 进入刷新状态
@@ -161,7 +160,7 @@
     }
 }
 
-- (void)beginRefreshingWithCompletionBlock:(void (^)())completionBlock
+- (void)beginRefreshingWithCompletionBlock:(void (^)(void))completionBlock
 {
     self.beginRefreshingCompletionBlock = completionBlock;
     
@@ -171,10 +170,10 @@
 #pragma mark 结束刷新状态
 - (void)endRefreshing
 {
-    self.state = MJRefreshStateIdle;
+    MJRefreshDispatchAsyncOnMainQueue(self.state = MJRefreshStateIdle;)
 }
 
-- (void)endRefreshingWithCompletionBlock:(void (^)())completionBlock
+- (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock
 {
     self.endRefreshingCompletionBlock = completionBlock;
     
@@ -215,8 +214,7 @@
 - (void)setPullingPercent:(CGFloat)pullingPercent
 {
     _pullingPercent = pullingPercent;
-    NSLog(@"%f_________%f", self.alpha, pullingPercent);
-
+    
     if (self.isRefreshing) return;
     
     if (self.isAutomaticallyChangeAlpha) {
@@ -227,7 +225,7 @@
 #pragma mark - 内部方法
 - (void)executeRefreshingCallback
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    MJRefreshDispatchAsyncOnMainQueue({
         if (self.refreshingBlock) {
             self.refreshingBlock();
         }
@@ -237,7 +235,7 @@
         if (self.beginRefreshingCompletionBlock) {
             self.beginRefreshingCompletionBlock();
         }
-    });
+    })
 }
 @end
 
@@ -253,22 +251,14 @@
     return label;
 }
 
-- (CGFloat)mj_textWith {
+- (CGFloat)mj_textWidth {
     CGFloat stringWidth = 0;
     CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
     if (self.text.length > 0) {
-#if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-        stringWidth =[self.text
-                      boundingRectWithSize:size
-                      options:NSStringDrawingUsesLineFragmentOrigin
-                      attributes:@{NSFontAttributeName:self.font}
-                      context:nil].size.width;
-#else
-        
-        stringWidth = [self.text sizeWithFont:self.font
-                             constrainedToSize:size
-                                 lineBreakMode:NSLineBreakByCharWrapping].width;
-#endif
+        stringWidth = [self.text boundingRectWithSize:size
+                                              options:NSStringDrawingUsesLineFragmentOrigin
+                                           attributes:@{NSFontAttributeName:self.font}
+                                              context:nil].size.width;
     }
     return stringWidth;
 }

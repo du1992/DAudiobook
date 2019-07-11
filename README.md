@@ -1,10 +1,27 @@
+# iOS-DAudiobook
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Language](https://img.shields.io/badge/javascript-ES6-orange.svg)](https://www.javascript.com/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/goolhanrry/Weapp-Demo-LemonJournal.svg)](https://github.com/goolhanrry/Weapp-Demo-LemonJournal/commits/master)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/goolhanrry/Weapp-Demo-LemonJournal.svg?colorB=fa5b19)](https://github.com/goolhanrry/Weapp-Demo-LemonJournal)
+
+
+
 ## 效果图：
 目前主要是有菜单页面，音乐播放，视频播放，文字段子，论坛讨论和图片美图这几个大的板块：
 
-![菜单页](https://upload-images.jianshu.io/upload_images/3323633-8239e256adf56f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![论坛讨论](https://upload-images.jianshu.io/upload_images/3323633-f73207beb911171f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![图片美图](https://upload-images.jianshu.io/upload_images/3323633-130980a888e87783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
-![音乐播放](https://upload-images.jianshu.io/upload_images/3323633-eb69d0b81d2e24f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+<p align="center">
+  <img width="200" src="Screenshots/1.png" hspace="30px" />
+  <img width="200" src="Screenshots/2.png" hspace="30px" />
+  <img width="200" src="Screenshots/3.png" hspace="30px" />
+</p>
+
+<p align="center">
+  <img width="200" src="Screenshots/4.png" hspace="30px" />
+  <img width="200" src="Screenshots/5.png" hspace="30px" />
+  <img width="200" src="Screenshots/6.png" hspace="30px" />
+</p>
+
 ## 用到的第三方SDK：
 Bmob后端云       （主要用于，用户的登录注册和论坛的发布）
 Bmob推送         （用于推送信息到手机）

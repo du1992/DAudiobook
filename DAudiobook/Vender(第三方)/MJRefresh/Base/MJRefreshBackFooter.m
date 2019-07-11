@@ -31,7 +31,7 @@
     // 如果正在刷新，直接返回
     if (self.state == MJRefreshStateRefreshing) return;
     
-    _scrollViewOriginalInset = self.scrollView.contentInset;
+    _scrollViewOriginalInset = self.scrollView.mj_inset;
     
     // 当前的contentOffset
     CGFloat currentOffsetY = self.scrollView.mj_offsetY;
@@ -91,6 +91,9 @@
             [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
                 self.scrollView.mj_insetB -= self.lastBottomDelta;
                 
+                if (self.endRefreshingAnimateCompletionBlock) {
+                    self.endRefreshingAnimateCompletionBlock();
+                }
                 // 自动调整透明度
                 if (self.isAutomaticallyChangeAlpha) self.alpha = 0.0;
             } completion:^(BOOL finished) {
@@ -124,20 +127,6 @@
             [self executeRefreshingCallback];
         }];
     }
-}
-
-- (void)endRefreshing
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.state = MJRefreshStateIdle;
-    });
-}
-
-- (void)endRefreshingWithNoMoreData
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.state = MJRefreshStateNoMoreData;
-    });
 }
 #pragma mark - 私有方法
 #pragma mark 获得scrollView的内容 超出 view 的高度

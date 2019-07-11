@@ -21,4 +21,14 @@
     
 }
 
+/**数据处理**/
+-(void)modelDealWith:(BmobObject *)obj{
+    
+    self.content        = [obj objectForKey:@"content"];
+    self.authorID       = [obj objectForKey:@"authorID"];
+    self.nickName       = [obj objectForKey:@"nickName"];
+    self.userLogo       = [obj objectForKey:@"userLogo"];
+    self.isAnonymous    = [obj objectForKey:@"isAnonymous"];
+    
+}
 @end

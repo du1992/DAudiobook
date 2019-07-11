@@ -7,6 +7,7 @@
 //
 
 #import "DBaseModel.h"
+#import <BmobSDK/Bmob.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *authorID;
 /**是否匿名**/
 @property (nonatomic, strong) NSString *isAnonymous;
+
+/**数据处理**/
+-(void)modelDealWith:(BmobObject *)obj;
 
 /**cell高度**/
 @property (nonatomic)  CGFloat cellHeight;

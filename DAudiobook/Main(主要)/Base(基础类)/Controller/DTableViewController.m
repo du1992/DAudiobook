@@ -76,11 +76,10 @@
   
     
     // 2.上拉刷新(上拉加载更多数据)
-    MJRefreshFooter *footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-         [weakSelf                       onFooterRefreshing];
-         [weakSelf.tableView.mj_footer    endRefreshing];
-    }];
+    MJRefreshBackNormalFooter*footer =[MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(onFooterRefreshing)];
     self.tableView.mj_footer = footer;
+    self.tableView.mj_footer.hidden = NO;
+   
 }
 
 - (void) setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated{
@@ -106,6 +105,7 @@
 }
 #pragma mark - j
 -(void)endNetworkRequest{
+      [self.tableView.mj_footer    endRefreshing];
      [self.indicatorAnimationView removeAllAnimation];
       self.isRefresh=NO;
 }

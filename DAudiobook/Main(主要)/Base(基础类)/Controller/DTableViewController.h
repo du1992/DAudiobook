@@ -17,10 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) DPageModel          *pageModel;
 
 
-
-
-/** 触发bottom刷新的距离，默认为TCTableViewDefaultBottmRefreshingMargin:800 */
-@property (nonatomic) CGFloat footerRefresingBeginBottmMarign;
 /** 结束网络刷新动画 */
 -(void)endNetworkRequest;
 /** 上啦加载 */
